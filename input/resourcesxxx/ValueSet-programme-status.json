@@ -1,0 +1,16 @@
+{
+  "resourceType": "ValueSet",
+  "id": "programme-status",
+  "url": "https://bsa-uat.pinga.health/ig/ValueSet/programme-status",
+  "version": "1.0.0",
+  "name": "ProgrammeStatusValueSet",
+  "title": "Programme Status Value Set",
+  "experimental": false,
+  "date": "2025-11-14", 
+  "publisher": "Breast Screening New Zealand",
+  "description": "Valid codes representing the current programme status of a participant within the screening pathway.",
+  "status": "active",
+  "compose": {
+    "include":[{"system":"https://bsa-uat.pinga.health/ig/CodeSystem/programme-status"}]
+  }
+}

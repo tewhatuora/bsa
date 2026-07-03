@@ -1,0 +1,26 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "breastscreening-nz",
+  "url": "https://health.govt.nz/fhir/ImplementationGuide/breastscreening-nz",
+  "version": "1.0.0",
+  "name": "BreastScreeningNZFHIRIG",
+  "title": "Breast Screening New Zealand FHIR Implementation Guide",
+  "status": "draft",
+  "date": "2025-11-09",
+  "publisher": "Te Whatu Ora | Health New Zealand",
+  "contact": [{
+    "name": "Breast Screening NZ FHIR Team",
+    "telecom": [{"system": "email", "value": "breastscreening@health.nz"}]
+  }],
+  "description": "FHIR Implementation Guide for Breast Screening NZ. Defines how base FHIR resources are used to represent screening pathway data, with a few custom extensions on CarePlan.",
+  "fhirVersion": ["4.0.1"],
+  "definition": {
+    "resource": [
+      { "reference": { "reference": "StructureDefinition/CarePlan-Extensions" } },
+      { "reference": { "reference": "Patient/IpsPatient" } },
+      { "reference": { "reference": "EpisodeOfCare/Example" } },
+      { "reference": { "reference": "Appointment/Example" } },
+      { "reference": { "reference": "Organization/Example" } }
+    ]
+  }
+}

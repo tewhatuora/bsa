@@ -1,0 +1,44 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "pathway-state",
+  "url": "https://bsa-uat.pinga.health/ig/StructureDefinition/pathway-state",
+  "version": "1.0.0",
+  "name": "PathwayStateExtension",
+  "title": "Pathway State Extension",
+  "status": "active",
+  "abstract": false,
+  "fhirVersion": "4.0.1",
+  "kind": "complex-type",
+  "context": [{ "type": "element", "expression": "CarePlan" }],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "short": "Pathway state",
+        "definition": "The current state of the participant within the screening pathway.",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "https://bsa-uat.pinga.health/ig/StructureDefinition/pathway-state"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "min": 1,
+        "max": "1",
+        "type": [{ "code": "CodeableConcept" }],
+        "binding": {
+          "strength": "required",
+          "valueSet": "https://bsa-uat.pinga.health/ig/ValueSet/pathway-state"
+        }
+      }
+    ]
+  }
+} 

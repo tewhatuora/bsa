@@ -1,0 +1,35 @@
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="cpir-bsnz"/>
+  <url value="http://example.org/fhir/IG/cpir-bsnz"/>
+  <version value="1.0.0"/>
+  <name value="CpirBreastScreeningNZ"/>
+  <status value="draft"/>
+  <fhirVersion value="4.0.1"/>
+  <definition>
+    <page>
+      <nameUrl value="index.html"/>
+      <title value="Home"/>
+      <generation value="markdown"/>
+      <page>
+        <nameUrl value="scope.html"/>
+        <title value="Scope"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="usecases.html"/>
+        <title value="Use Cases"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="data-model.html"/>
+        <title value="Data Model"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="careplan-extensions.html"/>
+        <title value="CarePlan Extensions"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+  </definition>
+</ImplementationGuide>

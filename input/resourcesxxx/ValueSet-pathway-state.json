@@ -1,0 +1,20 @@
+{
+  "resourceType": "ValueSet",
+  "id": "pathway-state",
+  "url": "https://bsa-uat.pinga.health/ig/ValueSet/pathway-state",
+  "version": "1.0.0",
+  "name": "PathwayStateValueSet",
+  "title": "Pathway State Value Set",
+  "experimental": false,
+  "date": "2025-11-14",
+  "publisher": "Breast Screening New Zealand",
+  "description": "Valid codes representing the current state of a participant within the screening pathway.",
+  "status": "active",
+  "compose": {
+    "include": [
+      {
+        "system": "https://bsa-uat.pinga.health/ig/CodeSystem/pathway-state"
+      }
+    ]
+  }
+}

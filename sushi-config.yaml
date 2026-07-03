@@ -1,0 +1,52 @@
+# ╭────────────────────────────ImplementationGuide-hl7.org.nz.hpi.json─────────────────────────────╮
+
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+
+# │  supported properties, see:                                                                    │
+
+# │  http://build.fhir.org/ig/HL7/fhir-shorthand/branches/beta/sushi.html#ig-development           │
+
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+id: nz.breastscreening.fhir.ig
+canonical: http://hl7.org.nz/fhir/ig/bsa
+version: 1.1.0
+name: BreastScreeningNZFHIRImplementationGuide
+title: Breast Screening NZ FHIR Implementation Guide
+status: draft
+publisher:
+  name: Te Whatu Ora
+  email: mailto:integration@health.govt.nz
+description: The FHIR  API for  BSA
+license: CC0-1.0
+dependencies:  
+  hl7.fhir.uv.extensions.r4:
+    version: 5.2.0
+ 
+
+   
+fhirVersion: 4.0.1
+parameters:
+  show-inherited-invariants: false
+copyrightYear: 2020+
+releaseLabel: Release
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+
+# │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │
+
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  IG Home: index.html
+ 
+  API: API.html
+  Profiles: profiles.html
+  
+  Table of Contents: toc.html
+  Artifact Index: artifacts.html
+  Support:
+    FHIR Spec: new-tab http://hl7.org/fhir/R4/index.html
+    Download IG: full-ig.zip
+    Artifacts (Json): definitions.json.zip
+    Artifacts (Xml): definitions.xml.zip
+   
+    

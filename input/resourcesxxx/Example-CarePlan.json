@@ -1,0 +1,78 @@
+{
+                "resourceType": "CarePlan",
+                "id": "CAREPLAN-XXXXXX",
+                "meta": {
+                  
+                    "source": "#XER6yVmYcwvvarZA",
+                    "profile": [
+                        "http://hl7.org/fhir/StructureDefinition/CarePlan"
+                    ]
+                },
+                "extension": [
+                    {
+                        "id": "ProgrammeStatus",
+                        "url": "https://bsa-uat.pinga.health/ig/site/StructureDefinition-programme-status.html",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "https://bsa-uat.pinga.health/ig/site/CodeSystem-programme-status.html",
+                                    "code": "NOT_ENROLLED",
+                                    "display": "NOT_ENROLLED"
+                                }
+                            ],
+                            "text": "NOT_ENROLLED"
+                        }
+                    },
+                    {
+                        "id": "PathwayState",
+                        "url": "https://bsa-uat.pinga.health/ig/site/StructureDefinition-pathway-state.html",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "https://bsa-uat.pinga.health/ig/site/CodeSystem-pathway-state.html",
+                                    "code": "Exited",
+                                    "display": "Exited"
+                                }
+                            ],
+                            "text": "Exited"
+                        }
+                    },
+                    {
+                        "id": "PathwaySubState",
+                        "url": "https://bsa-uat.pinga.health/ig/site/StructureDefinition-pathway-substate.html",
+                        "valueCodeableConcept": {
+                            "coding": [
+                                {
+                                    "system": "https://bsa-uat.pinga.health/ig/site/CodeSystem-pathway-substate.html",
+                                    "code": "Deceased",
+                                    "display": "Deceased"
+                                }
+                            ],
+                            "text": "Deceased"
+                        }
+                    },
+                    {
+                        "id": "PathwayStatusLastModified",
+                        "url": "https://bsa-uat.pinga.health/ig/site/StructureDefinition-pathway-state-date-last-modified.html",
+                        "valueDateTime": "2025-11-07T13:16:36+00:00"
+                    },
+                    {
+                        "id": "DateLastScreened",
+                        "url": "http://hospital.health.org/fhir/StructureDefinition/date-last-screened",
+                        "valueDateTime": "2015-08-10T03:09:18+00:00"
+                    }
+                ],
+                "status": "on-hold",
+                "intent": "plan",
+                "subject": {
+                    "reference": "Patient/PAT-XXXXXX"
+                },
+                "period": {
+                    "start": "2005-05-16T00:00:00+00:00",
+                    "end": "2017-08-13T12:00:00+00:00"
+                },
+                "author": {
+                    "reference": "Organization/ORG-XXX",
+                    "display": "Lead Provider Example"
+                }
+            }

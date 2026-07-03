@@ -1,0 +1,116 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "nz.breastscreening.fhir.ig",
+  "url": "https://bsa-uat.pinga.health/ig/ImplementationGuide/breastscreening-nz",
+  "version": "1.0.0",
+  "name": "BreastScreeningNZFHIRImplementationGuide",
+  "title": "Breast Screening NZ FHIR Implementation Guide",
+  "packageId": "nz.breastscreening.fhir.ig",
+  "status": "active",
+  "date": "2025-11-09",
+  "publisher": "Breast Screening New Zealand",
+  "description": "FHIR Implementation Guide for Breast Screening NZ, defining core resources and custom extensions for pathway and programme state management.",
+  "fhirVersion": ["4.0.1"],
+  "definition": {
+    "grouping": [
+      {
+        "id": "core",
+        "name": "Core CPIR Resources"
+      }
+    ],
+    "page": {
+      "nameUrl": "index.html",
+      "title": "Home",
+      "generation": "markdown",
+      "page": [
+        {
+          "nameUrl": "scope.html",
+          "title": "Scope",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "data-model.html",
+          "title": "Data Model",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "profiles-and-extensions.html",
+          "title": "Profiles and Extensions",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "careplan-extensions.html",
+          "title": "CarePlan Extensions",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "resource": [
+  {
+    "reference": { "reference": "StructureDefinition/CarePlan-BreastScreening" },
+    "name": "Breast Screening CarePlan Profile",
+    "description": "Profile for CarePlan resources in the breast screening programme",
+    "exampleBoolean": false
+  },
+  {
+    "reference": { "reference": "StructureDefinition/pathway-state" },
+    "name": "Pathway State Extension",
+    "description": "Extension to capture the current state in the screening pathway",
+    "exampleBoolean": false
+  },
+  {
+    "reference": { "reference": "StructureDefinition/pathway-substate" },
+    "name": "Pathway Substate Extension",
+    "description": "Extension to capture detailed substate within the pathway",
+    "exampleBoolean": false
+  },
+  {
+    "reference": { "reference": "StructureDefinition/programme-status" },
+    "name": "Programme Status Extension",
+    "description": "Extension to capture enrollment status in the programme",
+    "exampleBoolean": false
+  },
+  {
+    "reference": { "reference": "StructureDefinition/pathway-state-date-last-modified" },
+    "name": "Pathway State Date Last Modified Extension",
+    "description": "Extension to record when the pathway state was last changed",
+    "exampleBoolean": false
+  },
+  {
+    "reference": { "reference": "CodeSystem/pathway-state" },
+    "name": "Pathway State CodeSystem",
+    "description": "Codes representing states in the screening pathway",
+    "exampleBoolean": false
+  },
+  {
+    "reference": { "reference": "CodeSystem/pathway-substate" },
+    "name": "Pathway Substate CodeSystem",
+    "description": "Codes for detailed pathway substates",
+    "exampleBoolean": false
+  },
+  {
+    "reference": { "reference": "CodeSystem/programme-status" },
+    "name": "Programme Status CodeSystem",
+    "description": "Codes for programme enrollment status",
+    "exampleBoolean": false
+  },
+  {
+    "reference": { "reference": "ValueSet/pathway-state" },
+    "name": "Pathway State ValueSet",
+    "description": "Valid codes for pathway states",
+    "exampleBoolean": false
+  },
+  {
+    "reference": { "reference": "ValueSet/pathway-substate" },
+    "name": "Pathway Substate ValueSet",
+    "description": "Valid codes for pathway substates",
+    "exampleBoolean": false
+  },
+  {
+    "reference": { "reference": "ValueSet/programme-status" },
+    "name": "Programme Status ValueSet",
+    "description": "Valid codes for programme status",
+    "exampleBoolean": false
+  }
+]}
+}
