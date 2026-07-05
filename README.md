@@ -15,10 +15,10 @@ p[reparing to buil;d with TWO IG build pipeline
 1. we have not define the value set to use for category - this is the default example http://hl7.org/fhir/R4/valueset-diagnostic-service-sections.html - need to check with NZHTS
 
 ###general
-1. can we changE to profiled resources instead of unprofiled. It will make it explicit what the server capabailities are making it easier to test and easier for clients to understand what the server offers.
+1 changE to profiled resources instead of unprofiled. It will make it explicit what the server capabailities are making it easier to test and easier for clients to understand what the server offers.
  It will also a allows us to lock the server down to just the operations we want to support, reducing attack surface area.
  
- ### To do
+### To do
  profile careplan - done, needs review
  profile diagnosticreport
  

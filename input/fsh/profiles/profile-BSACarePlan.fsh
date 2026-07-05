@@ -22,6 +22,7 @@ Description:    "Describes a participant's BSA screening enrolment and pathway s
 * goal 0..0
 * supportingInfo 0..0
 * activity 0..0
+* implicitRules 0..0
 
 //restricted
 * status MS

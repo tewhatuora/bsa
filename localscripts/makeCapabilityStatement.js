@@ -50,7 +50,7 @@ if (fs.existsSync(rootPath)) {
             let capStmt = JSON.parse(contents)
 
             if (capStmt.description) {
-                ar.push('<div><h2>' + cleanText(capStmt.description) + "</h2></div>") 
+                ar.push('<div><h3>' + cleanText(capStmt.description) + "</h3></div>") 
                 console.log('description: ' + capStmt.description)
             }
             
