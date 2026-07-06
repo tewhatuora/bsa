@@ -10,7 +10,7 @@
 <td><p>A profile of CarePlan to describe  participant&#39;ss BSA screening enrolment and pathway status"</p></td>
 </tr>
 <tr>
-<td><a href='StructureDefinition-.html'>BsaDiagnosticReport</a></td>
+<td><a href='StructureDefinition-BsaDiagnosticReport.html'>BsaDiagnosticReport</a></td>
 <td>http://hl7.org.nz/fhir/StructureDefinition/BsaDiagnosticReport</td>
 <td><p>Describes a participant's BSA screening outcomes and radiologist assessment reports</p></td>
 </tr>
