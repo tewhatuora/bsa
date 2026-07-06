@@ -2,7 +2,7 @@
 
 ### Get BSA CarePlan  for Patient
 
-This is typically used to get all AllergyIntolerances for a patient.
+This is typically used to get BSA screening enrolment and pathway status for a participant.
 
 
 <div>
@@ -33,7 +33,7 @@ This is used to find all CarePlans filtered by status, category, date or a combi
 
 ####  Get BSA CarePlan for Patient  processing steps:
 
-1. A FHIR Client sends a GET request  to the BSA  *CarePlan* endpoint with  the 'status' 'category' and 'date'
+1. A FHIR Client sends a GET request  to the BSA  *CarePlan* endpoint with some combination of the  'status' 'category' and 'date' parameters
 2. The request is validated - ALT: Validation failure. Operation Outcome resource returned
 3. CarePlans for  this NHI are retrieved from BSA
 4. A bundle of CarePlan resources is returned to the client

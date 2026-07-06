@@ -3,16 +3,16 @@ skinparam sequenceArrowThickness 2
 skinparam roundcorner 5
 skinparam maxmessagesize 180
 skinparam sequenceParticipant bold
-title  CarePlan Search
+title  AllergyIntolerance Search
 participant "FHIR Client" as A #CornflowerBlue
 participant "BSA Service " as B #CornflowerBlue
 participant "BSA FHIR database" as C #CornflowerBlue
 
-A -> B: GET [base]/CarePlan?category=RAD&status=registered
+A -> B: GET [base]//DiagnosticReport?status=final&category=RAD
 B -> B: Validate
 B -> C: query
 C -[dashed]-> B:
 
-B -[dashed]-> A: CarePlan Bundle Response 
+B -[dashed]-> A: DiagnosticReport Bundle Response 
 
 @enduml

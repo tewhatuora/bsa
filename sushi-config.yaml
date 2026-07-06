@@ -38,8 +38,9 @@ releaseLabel: Release
 menu:
   IG Home: index.html
   Use cases:
-    Get CarePlan: getCarePlan.html
- 
+    Get Care Plan: getCarePlan.html
+    Get Diagnostic Report: getDiagnosticReport.html
+
   API: API.html
   Profiles: profiles.html
   Terminology: terminology.html
