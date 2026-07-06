@@ -12,15 +12,12 @@ Description:    "Describes a participant's BSA screening outcomes and radiologis
 * subject only Reference(Patient) 
 
 //excluded
+* implicitRules 0..0
+* language 0..0
 * basedOn 0..0
 * encounter 0..0
 * issued 0..0
 * resultsInterpreter 0..0
 * imagingStudy 0..0
-
-
-
-
-
-
-
+* conclusion 0..0
+* conclusionCode 0..0

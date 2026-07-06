@@ -37,10 +37,12 @@ releaseLabel: Release
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   IG Home: index.html
+  Use cases:
+    Get AllergyIntolerance: getCarePlan.html
  
   API: API.html
   Profiles: profiles.html
-  
+  Terminology: terminology.html
   Table of Contents: toc.html
   Artifact Index: artifacts.html
   Support:

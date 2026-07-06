@@ -1,6 +1,7 @@
-Instance: CAREPLAN-XXXXXX
+Instance: CAREPLAN-1
 InstanceOf: CarePlan
 Usage: #example
+* id = "CP1"
 * meta.source = "#XER6yVmYcwvvarZA"
 * extension[0].id = "ProgrammeStatus"
 * extension[=].url = "https://bsa-uat.pinga.health/ig/site/StructureDefinition-programme-status.html"
