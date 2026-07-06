@@ -38,7 +38,7 @@ releaseLabel: Release
 menu:
   IG Home: index.html
   Use cases:
-    Get AllergyIntolerance: getCarePlan.html
+    Get CarePlan: getCarePlan.html
  
   API: API.html
   Profiles: profiles.html

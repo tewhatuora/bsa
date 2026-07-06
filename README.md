@@ -20,15 +20,14 @@ p[reparing to buil;d with TWO IG build pipeline
  
 ### To do
  profile careplan - done, needs review
- profile diagnosticreport
+ profile diagnosticreport - done, needs review
  
  gofish careplan extensions and add to profile
 
 content in resources/ __pagecontent needs to be reviewed, moved and linked into ig
  add uses cases
  
- switch to TWO repo
- 
+bundle examples for search
  
  
  

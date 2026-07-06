@@ -4,10 +4,10 @@
 
 This is typically used to get all AllergyIntolerances for a patient.
 
+
 <div>
-
+{% include search-CarePlan.svg %}
 </div>
-
 
 
 ####  Get BSA CarePlan for Patient  processing steps:
@@ -19,20 +19,27 @@ This is typically used to get all AllergyIntolerances for a patient.
 
 
 ####  Get  BSA CarePlans  Response Example 
-[get-careplan-response-message-1](Bundle-CP1.json.html)
+[get-careplan-response-message-1](CarePlan-CP1.json.html)
 
 
 
 ### Search  BSA CarePlan
-This is used to find all CarePlan for a patient filtered by status, category, date or a combination. 
-
+This is used to find all CarePlans filtered by status, category, date or a combination. 
 
 <div>
-
+{% include search-CarePlan2.svg %}
 </div>
 
 
-<h3>Get and Search AllergyIntolerance for Patient Business Rules and Errors</h3>
+####  Get BSA CarePlan for Patient  processing steps:
+
+1. A FHIR Client sends a GET request  to the BSA  *CarePlan* endpoint with  the 'status' 'category' and 'date'
+2. The request is validated - ALT: Validation failure. Operation Outcome resource returned
+3. CarePlans for  this NHI are retrieved from BSA
+4. A bundle of CarePlan resources is returned to the client
+
+
+<h3>Get and Search CarePlan for Patient -  Business Rules and Errors</h3>
 <table>
 <style>
 table, th, td {
