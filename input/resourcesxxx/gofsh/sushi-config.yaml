@@ -1,6 +1,0 @@
-canonical: https://bsa-uat.pinga.health/ig
-fhirVersion: 4.0.1
-FSHOnly: true
-applyExtensionMetadataToRoot: false
-status: active
-version: 1.0.0
