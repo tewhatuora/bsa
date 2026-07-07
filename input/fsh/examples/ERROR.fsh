@@ -7,6 +7,6 @@ Usage: #example
 * id = "E1"
 * issue.severity =  #error
 * issue.code =  #processing
-* issue .diagnostics = " "HAPI-0524: Unknown search parameter \"statusx\" for resource type \"CarePlan\"
+* issue.diagnostics = "HAPI-0524: Unknown search parameter"
  
 
