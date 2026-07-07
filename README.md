@@ -25,11 +25,7 @@ p[reparing to buil;d with TWO IG build pipeline
  
 ### To do
 
-add business context
-add error example
-build in two pipeline
-content in resources/ __pagecontent needs to be reviewed, moved and linked into ig
-
+do we want to add anyting from here  https://breastscreening.health.nz/ig/site/usecases.html tot he business views usecase?
 
 validation script
  
