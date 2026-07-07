@@ -19,7 +19,11 @@ This is typically used to get a BSA radiologist assessment reports.
 
 
 ####  Get BSA DiagnosticReport Response Example 
+[get-diagnosticreport-response-message-1](Bundle-DRB1.json.html)
 
+
+####  Get  BSA DiagnosticReport  Error Example 
+[get-diagnosticreport-error-message-1](OperationOutcome-E1.json.html)
 
 
 ### Search BSA DiagnosticReport

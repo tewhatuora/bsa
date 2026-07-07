@@ -24,15 +24,14 @@ p[reparing to buil;d with TWO IG build pipeline
  It will also a allows us to lock the server down to just the operations we want to support, reducing attack surface area.
  
 ### To do
- profile careplan - done, needs review
- profile diagnosticreport - done, needs review
- 
- gofish careplan extensions and add to profile
 
+add business context
+add error example
+build in two pipeline
 content in resources/ __pagecontent needs to be reviewed, moved and linked into ig
- add uses cases
- 
-bundle examples for search
+
+
+validation script
  
  
  

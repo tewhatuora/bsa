@@ -2,6 +2,7 @@ CodeSystem: PathwaySubstate
 Id: pathway-substate
 Title: "Pathway Substate Code System"
 Description: "Codes for detailed substates within the screening pathway, providing additional granularity to pathway states."
+* ^url = "https://breastscreening.health.nz/ig/ValueSet/pathway-substate"
 * ^version = "1.0.0"
 * ^status = #active
 * ^experimental = false

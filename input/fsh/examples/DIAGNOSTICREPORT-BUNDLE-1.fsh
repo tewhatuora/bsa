@@ -3,7 +3,7 @@ Instance: DIAGNOSTICREPORT-BUNDLE-1
 InstanceOf: Bundle
 Description: "Example BSA Diagnostic Report search result"
 Usage: #example
-* id = "DRBV1"
+* id = "DRB1"
 
 * type = #searchset
 
@@ -11,7 +11,7 @@ Usage: #example
 
 * entry[0].resource.resourceType = "DiagnosticReport"
 * entry[=].resource.status = #final
-* entry[=].resource.subject = Reference(Patient/ABC1234)
+* entry[=].resource.subject = Reference(Patient/ZNK28DJ)
 * entry[=].resource.issued = "2005-05-16T00:00:00+00:00"
 * entry[=].resource.code.coding.system = "http://loinc.org"
 * entry[=].resource.code.coding.code = #18748-4
@@ -23,7 +23,7 @@ Usage: #example
 
 * entry[+].resource.resourceType = "DiagnosticReport"
 * entry[=].resource.status = #preliminary
-* entry[=].resource.subject = Reference(Patient/ABC1234)
+* entry[=].resource.subject = Reference(Patient/ZUA48EH)
 * entry[=].resource.issued = "2025-05-16T00:00:00+00:00"
 * entry[=].resource.code.coding.system = "http://loinc.org"
 * entry[=].resource.code.coding.code = #18748-4

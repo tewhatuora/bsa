@@ -30,13 +30,13 @@ Description:    "Describes a participant's BSA screening enrolment and pathway s
 * intent MS
 * subject 1.. MS
 * subject only Reference(Patient)
-* subject ^short = "Patient enrolled in breast screening"
+* subject ^short = "NHI Id of Patient enrolled in breast screening"
 * period MS
 * period ^short = "Enrollment period"
 * period ^definition = "Period from enrollment to exit (if applicable)"
 * author only Reference(Organization)
 * author MS
-* author ^short = "Managing organization"
+* author ^short = "Lead Provider HPI Org ID"
 
 //extensions
 * extension ^slicing.discriminator.type = #value

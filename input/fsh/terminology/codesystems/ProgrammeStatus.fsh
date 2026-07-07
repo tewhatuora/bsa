@@ -2,6 +2,7 @@ CodeSystem: ProgrammeStatus
 Id: programme-status
 Title: "Programme Status Code System"
 Description: "Codes representing a participant's enrollment status in the breast screening programme."
+* ^url = "https://breastscreening.health.nz/ig/CodeSystem/programme-status"
 * ^version = "1.0.0"
 * ^status = #active
 * ^experimental = false

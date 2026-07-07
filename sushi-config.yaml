@@ -37,6 +37,7 @@ releaseLabel: Release
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   IG Home: index.html
+  Business View: businessView.html
   Use cases:
     Get Care Plan: getCarePlan.html
     Get Diagnostic Report: getDiagnosticReport.html

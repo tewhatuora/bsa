@@ -2,6 +2,7 @@ CodeSystem: PathwayState
 Id: pathway-state
 Title: "Pathway State Code System"
 Description: "Codes representing states in the screening pathway workflow."
+* ^url = "https://breastscreening.health.nz/ig/CodeSystem/pathway-state"
 * ^version = "1.0.0"
 * ^status = #active
 * ^experimental = false

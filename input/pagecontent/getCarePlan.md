@@ -19,9 +19,10 @@ This is typically used to get BSA screening enrolment and pathway status for a p
 
 
 ####  Get  BSA CarePlans  Response Example 
-[get-careplan-response-message-1](CarePlan-CP1.json.html)
+[get-careplan-response-message-1](Bundle-CPB1.json.html)
 
-
+####  Get  BSA CarePlans  Error Example 
+[get-careplan-error-message-1](OperationOutcome-E1.json.html)
 
 ### Search  BSA CarePlan
 This is used to find all CarePlans filtered by status, category, date or a combination. 
