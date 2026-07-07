@@ -1,34 +1,36 @@
 
 # bsa-fhir-ig
 
-This is the source code for the BSA FHIR servicces
+This is the source code for the BSA FHIR IG
 
 
 ## Change log
-### inprogress
+v1.1.0 (WIIP)
 
 ported from https://github.com/sorsix/bsa-fhir-ig and converted to FSH
-p[reparing to buil;d with TWO IG build pipeline
+
 
 ## Issues
 ### DiagnosticReport
 1. we have not defined the value set to use for category - this is the default example http://hl7.org/fhir/R4/valueset-diagnostic-service-sections.html - need to check with NZHTS
 2. effective data is not populated - can't do data based searches
-3.  we have not defined the value set to use for code - LOINC is just poreferred 
+3.  we have not defined the value set to use for code - LOINC is just preferred 
 
 ### CarePlan
 1. effective data is not populated - can't do data based searches
 
 ###general
-1 change to profiled resources instead of unprofiled. It will make it explicit what the server capabailities are making it easier to test and easier for clients to understand what the server offers.
+1 change to profiled resources instead of unprofiled. It will make it explicit what the server capabilities are making it easier to test and easier for clients to understand what the server offers.
  It will also a allows us to lock the server down to just the operations we want to support, reducing attack surface area.
  
-### To do
+### How to build
+This IG is built using the [Te Whaturora IG builder ](https://github.com/tewhatuora/fhir-ig-builder)
+You will need an api key which is issued by trehe integraiton team
+Then you can initiate the build with a curl command
 
-do we want to add anyting from here  https://breastscreening.health.nz/ig/site/usecases.html tot he business views usecase?
+`curl --location 'https://fhir-ig-builder.api-uat.digital.health.nz/v1/build' --header 'x-api-key: My API Key' --header 'Content-Type: application/json' --data '{"igSourceGitUrl":"https://github.com/tewhatuora/bsa.git", "gitBranch":"master", "publishToRegistry": false}'`~
 
-validation script
- 
+
  
  
  

@@ -4,17 +4,20 @@ Description: "Example BSA Care Plan resource"
 Usage: #example
 * id = "CP1"
 
-* extension[0].id = "ProgrammeStatus"
-* extension[=].url = "https://breastscreening.health.nz/ig/CodeSystem/programme-status"
-* extension[=].valueCodeableConcept = #not-enrolled 
-* extension[+].id = "PathwayState"
-* extension[=].url = "https://breastscreening.health.nz/ig/CodeSystem/pathway-state"
-* extension[=].valueCodeableConcept = #exited
-* extension[+].id = "PathwaySubState"
-* extension[=].url = "https://breastscreening.health.nz/ig/ValueSet/pathway-substate"
-* extension[=].valueCodeableConcept =  #deceased 
-* extension[+].id = "PathwayStatusLastModified"
-* extension[=].url = "https://breastscreening.health.nz/ig/StructureDefinition/pathway-state-date-last-modified"
+
+* extension[0].url = "https://breastscreening.health.nz/ig/StructureDefinition/programme-status"
+* extension[=].valueCodeableConcept.coding.system =  "https://breastscreening.health.nz/ig/CodeSystem/programme-status"
+* extension[=].valueCodeableConcept.coding.code = #not-enrolled 
+
+* extension[+].url = "https://breastscreening.health.nz/ig/StructureDefinition/pathway-state"
+* extension[=].valueCodeableConcept.coding.system =  "https://breastscreening.health.nz/ig/CodeSystem/pathway-state"
+* extension[=].valueCodeableConcept.coding.code = #exited
+
+* extension[+].url = "https://breastscreening.health.nz/ig/StructureDefinition/pathway-substate"
+* extension[=].valueCodeableConcept.coding.system = "https://breastscreening.health.nz/ig/ValueSet/pathway-substate"
+* extension[=].valueCodeableConcept.coding.code =  #deceased 
+
+* extension[+].url = "https://breastscreening.health.nz/ig/StructureDefinition/pathway-state-date-last-modified"
 * extension[=].valueDateTime = "2025-11-07T13:16:36+00:00"
 * status = #on-hold
 * intent = #plan
