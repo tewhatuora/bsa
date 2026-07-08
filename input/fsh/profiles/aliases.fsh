@@ -1,5 +1,12 @@
-Alias: $CodeSystem-programme-status.html = https://bsa-uat.pinga.health/ig/site/CodeSystem-programme-status.html
-Alias: $CodeSystem-pathway-state.html = https://bsa-uat.pinga.health/ig/site/CodeSystem-pathway-state.html
-Alias: $CodeSystem-pathway-substate.html = https://bsa-uat.pinga.health/ig/site/CodeSystem-pathway-substate.html
-Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
-Alias: $organization-type = http://terminology.hl7.org/CodeSystem/organization-type
+
+
+Alias: $CodeSystem-programme-status =  http://hl7.org.nz/fhir/ig/bsa/CodeSystem/programme-status
+Alias: $CodeSystem-pathway-state = http://hl7.org.nz/fhir/ig/bsa/CodeSystem/pathway-state
+Alias: $CodeSystem-pathway-substate =  http://hl7.org.nz/fhir/ig/bsa/CodeSystem/pathway-substate
+
+Alias: $ValueSet-programme-status =  http://hl7.org.nz/fhir/ig/bsa/ValueSet/programme-status
+Alias: $ValueSet-pathway-state =  http://hl7.org.nz/fhir/ig/bsa/ValueSet/pathway-state
+Alias: $ValueSet-pathway-substate =  http://hl7.org.nz/fhir/ig/bsa/ValueSet/pathway-substate
+
+Alias: $Profile-BsaCarePlan =  http://hl7.org.nz/fhir/ig/bsa/StructureDefinition/BsaCarePlan
+Alias: $Profile-BsaDiagnosticReport =  http://hl7.org.nz/fhir/ig/bsa/StructureDefinition/BsaDiagnosticReport

@@ -6,7 +6,7 @@ Id:             BsaDiagnosticReport
 Title:          "BSA Diagnostic Report"
 Description:    "Describes a participant's BSA screening outcomes and radiologist assessment reports"
 
-* ^url = "http://hl7.org.nz/fhir/StructureDefinition/BsaDiagnosticReport"
+* ^url = $Profile-BsaDiagnosticReport 
 
 
 * subject only Reference(Patient) 
@@ -16,7 +16,6 @@ Description:    "Describes a participant's BSA screening outcomes and radiologis
 * language 0..0
 * basedOn 0..0
 * encounter 0..0
-* issued 0..0
 * resultsInterpreter 0..0
 * imagingStudy 0..0
 * conclusion 0..0

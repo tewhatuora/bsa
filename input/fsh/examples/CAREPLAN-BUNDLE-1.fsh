@@ -4,17 +4,17 @@ Description: "Example BSA Care Plan search result"
 Usage: #example
 * id = "CPB1"
 * type = #searchset
-* meta.profile = "http://hl7.org.nz/fhir/StructureDefinition/BsaCarePlan"
+* meta.profile = $Profile-BsaCarePlan
 * entry[0].resource.resourceType = "CarePlan"
-* entry[=].resource.extension[+].url =   "https://breastscreening.health.nz/ig/StructureDefinition/programme-status"
-* entry[=].resource.extension[=].valueCodeableConcept.coding.system =  "https://breastscreening.health.nz/ig/CodeSystem/programme-status"
+* entry[=].resource.extension[+].url =  "https://breastscreening.health.nz/ig/StructureDefinition/programme-status"
+* entry[=].resource.extension[=].valueCodeableConcept.coding.system =   $CodeSystem-programme-status 
 * entry[=].resource.extension[=].valueCodeableConcept = #not-enrolled
 * entry[=].resource.extension[+].url = "https://breastscreening.health.nz/ig/StructureDefinition/pathway-state"
-* entry[=].resource.extension[=].valueCodeableConcept.coding.system =  "https://breastscreening.health.nz/ig/CodeSystem/pathway-state"
+* entry[=].resource.extension[=].valueCodeableConcept.coding.system = $CodeSystem-pathway-state 
 * entry[=].resource.extension[=].valueCodeableConcept = #exited 
 * entry[=].resource.extension[+].url = "https://breastscreening.health.nz/ig/StructureDefinition/pathway-substate"
 * entry[=].resource.extension[=].valueCodeableConcept = #deceased "Deceased"
-* entry[=].resource.extension[=].valueCodeableConcept.coding.system = "https://breastscreening.health.nz/ig/ValueSet/pathway-substate"
+* entry[=].resource.extension[=].valueCodeableConcept.coding.system = $CodeSystem-pathway-substate
 * entry[=].resource.extension[=].valueCodeableConcept.text = "Deceased"
 * entry[=].resource.extension[+].url = "https://breastscreening.health.nz/ig/StructureDefinition/pathway-state-date-last-modified"
 * entry[=].resource.extension[=].valueDateTime = "2025-11-07T13:16:36+00:00"
@@ -25,32 +25,30 @@ Usage: #example
 * entry[=].resource.subject.display = "Participant NHI Id"
 * entry[=].resource.period.start = "2005-05-16T00:00:00+00:00"
 * entry[=].resource.period.end = "2017-08-13T12:00:00+00:00"
-//* entry[=].resource.author = Reference(Organization/GZZ956-B) "Lead Provider HPI Org ID"
 * entry[=].resource.author.type = "https://standards.digital.health.nz/ns/hpi-organisation-id"
 * entry[=].resource.author.identifier.value = "GZZ956-B"
 * entry[=].resource.author.display = "Lead Provider HPI Org ID"
+
 * entry[+].resource.resourceType = "CarePlan"
-* entry[=].resource.extension[+].url = "https://breastscreening.health.nz/ig/CodeSystem/programme-status"
-* entry[=].resource.extension[=].valueCodeableConcept.coding.system =  "https://breastscreening.health.nz/ig/CodeSystem/programme-status"
+* entry[=].resource.extension[+].url =  "https://breastscreening.health.nz/ig/StructureDefinition/programme-status"
+* entry[=].resource.extension[=].valueCodeableConcept.coding.system =   $CodeSystem-programme-status 
 * entry[=].resource.extension[=].valueCodeableConcept = #enrolled
-* entry[=].resource.extension[+].url = "https://breastscreening.health.nz/ig/CodeSystem/pathway-state"
-* entry[=].resource.extension[=].valueCodeableConcept.coding.system = "https://breastscreening.health.nz/ig/CodeSystem/pathway-state"
+* entry[=].resource.extension[+].url =  "https://breastscreening.health.nz/ig/StructureDefinition/pathway-state"
+* entry[=].resource.extension[=].valueCodeableConcept.coding.system =  $CodeSystem-pathway-state
 * entry[=].resource.extension[=].valueCodeableConcept = #booked 
 * entry[=].resource.extension[=].valueCodeableConcept.text = "booked"
-* entry[=].resource.extension[+].url = "https://breastscreening.health.nz/ig/ValueSet/pathway-substate"
-* entry[=].resource.extension[=].valueCodeableConcept.coding.system = "https://breastscreening.health.nz/ig/ValueSet/pathway-substate"
+* entry[=].resource.extension[+].url = "https://breastscreening.health.nz/ig/StructureDefinition/pathway-substate"
+* entry[=].resource.extension[=].valueCodeableConcept.coding.system = $CodeSystem-pathway-substate 
 * entry[=].resource.extension[=].valueCodeableConcept = #confirmed "Confirmed"
 * entry[=].resource.extension[=].valueCodeableConcept.text = "Confirmed"
 * entry[=].resource.extension[+].url = "https://breastscreening.health.nz/ig/StructureDefinition/pathway-state-date-last-modified"
 * entry[=].resource.extension[=].valueDateTime = "2025-11-07T13:16:36+00:00"
 * entry[=].resource.status = #active
 * entry[=].resource.intent = #plan
-//* entry[=].resource.subject = Reference(http://hl7.org.nz/fhir/StructureDefinition/NhiPatient/ZUA48EH) "Participant NHI ID"
 * entry[=].resource.subject.type = "https://standards.digital.health.nz/ns/nhi-id"
 * entry[=].resource.subject.identifier.value = "ZUA48EH"
-* entry[=].resource.subject.display = " Participant NHI Id"
+* entry[=].resource.subject.display = "Participant NHI Id"
 * entry[=].resource.period.start = "2015-05-16T00:00:00+00:00"
-//* entry[=].resource.author = Reference(Organization/GZZ956-B) "Lead Provider HPI Org ID"
 * entry[=].resource.author.type = "https://standards.digital.health.nz/ns/hpi-organisation-id"
 * entry[=].resource.author.identifier.value = "GZZ956-B"
 * entry[=].resource.author.display = "Lead Provider HPI Org ID"

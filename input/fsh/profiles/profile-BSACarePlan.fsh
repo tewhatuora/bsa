@@ -7,7 +7,7 @@ Id:             BsaCarePlan
 Title:          "BSA Care Plan"
 Description:    "Describes a participant's BSA screening enrolment and pathway status"
 
-* ^url = "http://hl7.org.nz/fhir/StructureDefinition/BsaCarePlan"
+* ^url = $Profile-BsaCarePlan 
 
 
 //excluded
