@@ -1,0 +1,22 @@
+# Calls thje TWO IG Builder
+# .
+
+name: TWO IG Master
+env:
+          API_TOKEN: ${{ secrets.IG_BUILDER_API_KEY_UAT }}
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+     - name: Trigger IG Build
+        run: |
+          curl --location 'https://fhir-ig-builder.api-uat.digital.health.nz/v1/build' --header 'x-api-key: '"$ API_TOKEN"'' \ 
+          --header 'Content-Type: application/json' --data '{"igSourceGitUrl":"https://github.com/tewhatuora/bsa.git", "gitBranch":"master", "publishToRegistry": false}'
