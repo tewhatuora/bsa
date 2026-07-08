@@ -76,9 +76,15 @@ The Care Plan resource:
     - Last screening information
     - Lead Provider responsible for the participant
  
-Care Plan Statuses
+Care Plan Status Mapping
 
  <table>
+    <style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+<style>
 <tr>
 <th>Te Puna Care Plan Status</th>
 <th>FHIR Status</th>
@@ -117,18 +123,24 @@ Use Cases
 
 The Diagnostic Report resource provides the clinical findings and outcomes generated during the BreastScreen Aotearoa screening pathway. It represents radiologist reports and related diagnostic information produced from screening and assessment activities. 
 
-It forms part of the participant's screening record and support the communication of screening outcomes, clinical conclusions, and associated reporting information to internal and external clinical systems.  
+The report forms part of the participant's screening record and supports the communication of screening outcomes, clinical conclusions, and associated reporting information to internal and external clinical systems.  
  
- Common Diagnostic report attributes include: 
+ Diagnostic report attributes include: 
 
  - Status
  - Issued Date
  - Screening Date
  - Report content
 
-Diagnostic Report Statuses
+Diagnostic Report Statuse Mapping
 
  <table>
+    <style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+<style>
 <tr>
 <th>Te Puna Status</th>
 <th>FHIR Status</th>
