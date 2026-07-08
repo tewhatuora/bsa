@@ -51,9 +51,10 @@ Indicates the participant's enrollment status in the breast screening programme.
 
 ### Pathway State
 
-**URL:** `https://bsa-uat.pinga.health/ig/StructureDefinition/pathway-state`  
+**URL:**  [pathway-state](CodeSystem-pathway-state.html)
+
 **Type:** CodeableConcept  
-**Cardinality:** 0..1 (1..1 in CarePlan-BreastScreening profile)  
+**Cardinality:** 0..1 (1..1 in BsaCarePlan profile)  
 **Binding:** [Pathway State ValueSet](ValueSet-pathway-state.html) (required)
 
 Represents the current state of the participant within the screening pathway workflow.
@@ -86,9 +87,9 @@ Represents the current state of the participant within the screening pathway wor
 
 ### Pathway Substate
 
-**URL:** `https://bsa-uat.pinga.health/ig/StructureDefinition/pathway-substate`  
+**URL:**  [pathway-substate](CodeSystem-pathway-substate.html)  
 **Type:** CodeableConcept  
-**Cardinality:** 0..1 (1..1 in CarePlan-BreastScreening profile)  
+**Cardinality:** 0..1 (1..1 in BsaCarePlan profile)  
 **Binding:** [Pathway Substate ValueSet](ValueSet-pathway-substate.html) (required)
 
 Provides additional granular detail about the participant's current pathway state.
@@ -113,7 +114,7 @@ Provides additional granular detail about the participant's current pathway stat
 
 **URL:** `https://bsa-uat.pinga.health/ig/StructureDefinition/pathway-state-date-last-modified`  
 **Type:** dateTime  
-**Cardinality:** 0..1 (1..1 in CarePlan-BreastScreening profile)
+**Cardinality:** 0..1 (1..1 in BsaCarePlan profile)
 
 Records the date and time when any of the status/state indicators were last updated. This supports audit requirements and enables tracking of participant progression through the screening workflow.
 
@@ -138,7 +139,7 @@ The following example shows a CarePlan for a breast screening participant who ha
   "id": "example-careplan",
   "meta": {
     "profile": [
-      "https://bsa-uat.pinga.health/ig/StructureDefinition/CarePlan-BreastScreening"
+      "https://bsa-uat.pinga.health/ig/StructureDefinition/BsaCarePlan"
     ],
     "lastUpdated": "2025-11-14T10:30:00+13:00"
   },
@@ -196,9 +197,9 @@ The following example shows a CarePlan for a breast screening participant who ha
 
 ---
 
-## Usage in CarePlan-BreastScreening Profile
+## Usage in BsaCarePlan Profile
 
-When using the [CarePlan-BreastScreening profile](StructureDefinition-CarePlan-BreastScreening.html), the following extensions have stricter cardinality requirements:
+When using the [BsaCarePlan profile](StructureDefinition-BsaCarePlan.html), the following extensions have stricter cardinality requirements:
 
 | Extension | Base Cardinality | Profile Cardinality | Required? |
 |-----------|------------------|---------------------|-----------|
@@ -213,7 +214,7 @@ This ensures that CarePlan instances conforming to the breast screening profile 
 
 ## Related Resources
 
-- [CarePlan-BreastScreening Profile](StructureDefinition-CarePlan-BreastScreening.html)
+- [BsaCarePlan Profile](StructureDefinition-BsaCarePlan.html)
 - [Pathway State CodeSystem](CodeSystem-pathway-state.html)
 - [Pathway Substate CodeSystem](CodeSystem-pathway-substate.html)
 - [Programme Status CodeSystem](CodeSystem-programme-status.html)

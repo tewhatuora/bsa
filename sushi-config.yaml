@@ -9,7 +9,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 
 id: nz.breastscreening.fhir.ig
-canonical: fhir-ig.digital.health.nz/bsa
+canonical: http://hl7.org.nz/fhir/ig/bsa
 version: 1.1.0
 name: BreastScreeningNZFHIRImplementationGuide
 title: Breast Screening NZ FHIR Implementation Guide
