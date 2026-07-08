@@ -71,8 +71,7 @@ Searches can also be by Organisation if you have the Organisation Id
 #### Searching Organisation 
 
 <!-- The [ HpiOrganization API](https://hpi-ig.hip.digital.health.nz/StructureDefinition-HpiOrganization.html) should be used to search for organisation and getting organisation details -->
-
-
+The Organisation resource can only be searched on organisations id's and names that are managed in Te Puna. These do not map to information held by the Health Provider Index
 
  
 
@@ -86,36 +85,55 @@ Searching on just the Status is allowed, with options to search by Final, or Pre
 
 ### Use Cases
 
-#### Care Plan
-
-Supports population screening campaign and facilitates reporting on programme participation and outcomes by enabling: 
-
-- Search screening Care Plans by NHI   
-
-- Search screening Care Plans by NHI and Status  
-
-- Search screening Care Plans by Date Range  
-
-- Search screening Care Plans by Status  
-
-##### Appointments
-
-- Search Appointments by NHI  
-
-- Search Appointments by Status  
-
-- Search Appointments by Date Range  
-
-- Search Appointments by NHI and Date Range 
-
-- Search upcoming Appointments 
-- Search upcoming Appointments  
-
-- Search participant screening appointment history by NHI  
-
-
+Screening Use Case Summary 
+- Episode Of Care - an individual screening journey or screening round.
+- Care Plan - the participants overall participation in the BreastScreen Aotearoa programme.
+- Appointment - specific screening or assessment appointments within an episode.
+- Dagnostic Report - a participants Radiologist report 
 
 ##### Episodes of Care 
+
+An Episode of Care represents a distinct period during which a participant is receiving screening-related care under the programme. It groups together the activities, appointments, assessments, and outcomes associated with a particular screening journey. 
+
+All of these activities can belong to the same Episode of Care. Once that pathway is completed, the episode is completed. A future screening round would typically generate a new episode. 
+
+The Episode Of Care resource:
+- Tracks a participant's period of care within the screening programme.
+- Has a period start date and period end date.
+- Is associated with the managing Lead Provider organisation.
+
+  Episode of Care Status
+
+  <table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+<style>
+<tr>
+<th>Te Puna Episode Status</th>
+<th>FHIR Status</th>
+<th>Description</th>
+</tr>
+
+<tr><td>NEW</td>
+<td>PLANNED</td>
+<td>Screening journey has been created but not yet commenced.</td>
+</tr>
+    
+<tr><td>IN_PROGRESS</td>
+<td>ACTIVE</td>
+<td>Participant is currently progressing through screening and/or assessment activities.</td>
+</tr>
+    
+<tr><td>COMPLETED</td>
+<td>FINISHED</td>
+<td>Participant has completed the screening episode.</td>
+</tr>
+</table>
+
+Use Cases
 
 - Search Episode of Care by NHI  
 
@@ -127,11 +145,193 @@ Supports population screening campaign and facilitates reporting on programme pa
 
 - Search participants with active Episodes of Care  
 
+#### Care Plan
+
+A Care Plan represents a participant's enrolment and current status in the BreastScreen Aotearoa programme, including their pathway and lead provider information. It is the longitudinal record of programme participation, while Episodes of Care represent individual screening journeys. 
+
+The Care Plan remains active while the participant stays in the programme, whereas each Episode of Care starts and finishes for a particular screening event 
+
+The Care Plan resource:
+ - Represents BSA programme enrolment.
+ - Facilitates reporting on programme participation and outcomes
+ - Includes
+    - Enrolment Date
+    - Programme Status
+    - Pathway State
+    - Pathway Sub State
+    - Last screening information
+    - Lead Provider responsible for the participant
  
+Care Plan Statuses
+
+ <table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+<style>
+<tr>
+<th>Te Puna Care Plan Status</th>
+<th>FHIR Status</th>
+<th>Description</th>
+</tr>
+ 
+<tr><td>PRE_ENROLLED</td>
+<td>DRAFT</td>
+<td>Participant has not yet fully enrolled in BSA.</td>
+    
+<tr><td>ENROLLED</td>
+<td>ACTIVE</td>
+<td>Participant is actively enrolled in the programme.</td>
+</tr>
+
+<tr><td>NOT_ENROLLED</td>
+<td>ENDED</td>
+<td>Participant is no longer enrolled in BSA.</td>
+</tr>
+</table>
+ 
+
+Use Cases
+
+- Search screening Care Plans by NHI   
+
+- Search screening Care Plans by NHI and Status  
+
+- Search screening Care Plans by Date Range  
+
+- Search screening Care Plans by Status  
+
+
+##### Appointments
+
+An Appointment represents a scheduled participant interaction within the breast screening pathway. It is the booking of a participant for a screening-related activity, such as: 
+- A routine screening mammogram. 
+- An assessment clinic appointment following an abnormal screening result.
+- Other programme-related clinical encounters. 
+
+Appointments are a key business event that can be searched through the API. Common appointment attributes include: 
+- The participant (identified by NHI).
+- Appointment date and time. 
+- Appointment status (for example Booked, Pending, Arrived, Fulfilled). 
+- Associated organisation or service provider. 
+
+Appointment Statuses
+
+ <table>
+  <style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+<style>
+<tr>
+<th>Status</th>
+<th>Description</th>
+</tr>
+ 
+ 
+<tr><td>Pending</td>
+<td>Appointment has been created but is not yet fully confirmed.</td>
+</tr>
+    
+<tr><td>Booked</td>
+<td>Appointment is scheduled and confirmed.</td>
+</tr>
+
+<tr><td>Arrived</td>
+<td>Participant has checked in or attended the appointment.</td>
+</tr>
+
+<tr><td>Fulfilled</td>
+<td>Appointment has been completed and the planned service was delivered.</td>
+    </tr>
+</table>
+
+
+Use Cases
+ 
+- Search Appointments by NHI 
+ 
+- Search Appointments by Status 
+ 
+- Search Appointments by Date Range
+ 
+- Search Appointments by NHI and Date Range
+ 
+- Search upcoming Appointments 
+ 
+- Search upcoming Appointments 
+ 
+- Search participant screening appointment history by NHI  
+
 
 ##### Diagnostic Report
 
-This resource provides elements related to a Screening Radiologist report for sharing with internal and external clinical systems by enabling
+The Diagnostic Report resource provides the clinical findings and outcomes generated during the BreastScreen Aotearoa screening pathway. It represents radiologist reports and related diagnostic information produced from screening and assessment activities. 
+
+It forms part of the participant's screening record and support the communication of screening outcomes, clinical conclusions, and associated reporting information to internal and external clinical systems.  
+ 
+ Common Diagnostic report attributes include: 
+
+ - Status
+ - Issued Date
+ - Screening Date
+ - Report content
+
+Diagnostic Report Statuses
+
+ <table>
+  <style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+<style>
+<tr>
+<th>Te Puna Status</th>
+<th>FHIR Status</th>
+<th>Description</th>
+</tr>
+
+<tr><td>DRAFT_NOT_STARTED</td>
+<td>registered</td>
+<td>Report created but not yet started</td>
+</tr>
+
+<tr><td>DRAFT_IN_PROGRESS</td>
+<td>partial</td>
+<td>Report is being drafted</td>
+</tr>
+    
+<tr><td>DOUBLE_READ_IN_PROGRESS</td>
+<td>preliminary</td>
+<td>Under double-read review</td>
+</tr>
+    
+<tr><td>PENDING_DOUBLE_READ</td>
+<td>preliminary</td>
+<td>Awaiting double-read</td>
+</tr>
+    
+<tr><td>COMPLETED</td>
+<td>final</td>
+<td>Report finalised</td>
+</tr>
+    
+<tr><td>COMPLETED_REPORT_SENT</td>
+<td>final</td>
+<td>Report finalised and sent</td>
+</tr>
+    
+<tr><td>ADDENDUM_IN_PROGRESS</td>
+<td>amended</td>
+<td>Report is being amended after finalisation</td>
+</tr>
+</table>
+
+Use Cases
 
 - Search Radiologist report by NHI
 
