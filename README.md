@@ -11,6 +11,7 @@ ported from https://github.com/sorsix/bsa-fhir-ig and converted to FSH
 
 
 ## Issues
+missing oids for terminology
 ### DiagnosticReport
 1. we have not defined the value set to use for category - this is the default example http://hl7.org/fhir/R4/valueset-diagnostic-service-sections.html - need to check with NZHTS
 2. effective data is not populated - can't do data based searches
