@@ -16,12 +16,11 @@ missing oids for terminology
 1. we have not defined the value set to use for category - this is the default example http://hl7.org/fhir/R4/valueset-diagnostic-service-sections.html - need to check with NZHTS
 2. effective data is not populated - can't do data based searches
 3.  we have not defined the value set to use for code - LOINC is just preferred 
-4. canoniocla urls do not align with HNBZ Standards?
-CodeSystem​.where(url = 'https:​/​/breastscreening​.health​.nz​/ig​/CodeSystem​/pathway-state')	error	Conformance resource C:\Users\pryan\git\bsa\fsh-generated\resources\CodeSystem-pathway-state.json 
-alis these
+4. cannonical urls do not align with HNBZ Standards?
+
 
 ### CarePlan
-1. effective data is not populated - can't do data based searches
+1. effective data is not populated - can't do date-based searches
 
 ###general
 1 change to profiled resources instead of unprofiled. It will make it explicit what the server capabilities are making it easier to test and easier for clients to understand what the server offers.
@@ -29,7 +28,7 @@ alis these
  
 ### How to build
 This IG is built using the [Te Whaturora IG builder ](https://github.com/tewhatuora/fhir-ig-builder)
-You will need an api key which is issued by trehe integraiton team
+You will need an api key which is issued by the integration team
 Then you can initiate the build with a curl command
 
 `curl --location 'https://fhir-ig-builder.api-uat.digital.health.nz/v1/build' --header 'x-api-key: My API Key' --header 'Content-Type: application/json' --data '{"igSourceGitUrl":"https://github.com/tewhatuora/bsa.git", "gitBranch":"master", "publishToRegistry": false}'`~

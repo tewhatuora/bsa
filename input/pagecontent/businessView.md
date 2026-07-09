@@ -22,7 +22,8 @@ Te Puna enables BreastScreen Aotearoa to:
 ### Te Puna's Role in the Screening Journey 
 At a high level, Te Puna acts as the system of record for key BreastScreen Aotearoa information, supporting the participant journey: 
 
-<img style="width:500px; float:none" src="PathwayImage.png"/>
+<!-- <img style="width:500px; float:none" src="PathwayImage.png"/> -->
+
 
 Te Puna maintains information associated with each stage of this journey and makes relevant information available to authorised users and systems. 
 
@@ -76,15 +77,16 @@ The Care Plan resource:
     - Last screening information
     - Lead Provider responsible for the participant
  
+
 Care Plan Status Mapping
 
- <table>
-    <style>
+<table>
+<style>
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
 }
-<style>
+</style>
 <tr>
 <th>Te Puna Care Plan Status</th>
 <th>FHIR Status</th>
@@ -94,6 +96,7 @@ table, th, td {
 <tr><td>PRE_ENROLLED</td>
 <td>DRAFT</td>
 <td>Participant has not yet fully enrolled in BSA.</td>
+</tr>
     
 <tr><td>ENROLLED</td>
 <td>ACTIVE</td>
@@ -132,15 +135,15 @@ The report forms part of the participant's screening record and supports the com
  - Screening Date
  - Report content
 
-Diagnostic Report Statuse Mapping
+Diagnostic Report Status Mapping
 
- <table>
-    <style>
+<table>
+<style>
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
 }
-<style>
+</style>
 <tr>
 <th>Te Puna Status</th>
 <th>FHIR Status</th>
