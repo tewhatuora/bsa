@@ -8,7 +8,7 @@ The following profiles have been defined for this implementation guide.
 
 ### CarePlan Profile
 
-**[CarePlan - Breast Screening](StructureDefinition-CarePlan-BreastScreening.html)**
+**[CarePlan - Breast Screening](StructureDefinition-BsaCarePlan.html)**
 
 This profile defines constraints on the CarePlan resource for representing a participant's enrollment and progression through the breast screening programme. It tracks the participant's pathway state, programme status, and key dates throughout their screening journey.
 
