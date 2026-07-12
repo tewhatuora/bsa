@@ -20,7 +20,8 @@ Usage: #definition
 
 * rest.resource.type = #DiagnosticReport
 * rest.resource.documentation = "Describes a participant's BSA screening outcomes and radiologist assessment reports"
-* rest.resource[=].profile = "http://hl7.org.nz/fhir/StructureDefinition/BsaDiagnosticReport"
+* rest.resource[=].profile =  $Profile-BsaDiagnosticReport
+								
 * rest.resource[=].interaction[0].code = #read
 //comma delimited fields in documentation string extracted by makeCapabilityStatement.js:   <verb,url,doc,scope>
 * rest.resource[=].interaction[=].documentation = "GET,[base]/DiagnosticReport/[id],Used to retrieve a participant's BSA screening outcomes and radiologist assessment reports, system/DiagnosticReport.r"
@@ -45,7 +46,7 @@ Usage: #definition
 
 * rest.resource[+].type = #CarePlan
 * rest.resource.documentation = "Describes a participant's BSA screening enrolment and pathway status"
-* rest.resource[=].profile = "http://hl7.org.nz/fhir/StructureDefinition/BsaCarePlan"
+* rest.resource[=].profile = $Profile-BsaCarePlan
 * rest.resource[=].interaction[0].code = #read
 * rest.resource[=].interaction[=].documentation = "GET,[base]/DiagnosticReport/[id],Used to retrieve a participant's BSA screening enrolment and pathway status, system/CarePlan.r"
 * rest.resource[=].interaction[+].code = #search-type
