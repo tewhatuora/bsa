@@ -34,7 +34,7 @@ This is used to find all DiagnosticReport filtered by status, category, date or 
 </div>
 
 
-####  Get BSA CarePlan for Patient processing steps:
+####  Get BSA DiagnosticReport for Patient processing steps:
 
 1. A FHIR Client sends a GET request  to the BSA  *DiagnosticReport* endpoint with  some combination of the  'status' 'category' and 'date' parameters
 2. The request is validated - ALT: Validation failure. Operation Outcome resource returned
@@ -64,6 +64,6 @@ table, th, td {
 <tr><td>Must be a valid search parameter value </td>
 <td> 400 Bad request </td>
 <td>not-supported</td>
-<td> Invalid request: The FHIR endpoint on this server does not know how to handle GET operation[DiagnosticReport/DiagnosticReport] with parameters &lt;x&gt;</td></tr>
+<td> Invalid request: The FHIR endpoint on this server does not know how to handle GET operation &lt;x&gt; with parameters &lt;y&gt;</td></tr>
 </table>
 

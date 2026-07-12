@@ -57,11 +57,11 @@ table, th, td {
 <tr><td> Must be a valid search parameter </td>
 <td> 400 Bad request </td>
 <td> processing</td>
-<td> HAPI-0524: Unknown search parameter &lt;x&gt; for resource type \"DiagnosticReport\". Valid search parameters for this search are: ....</td></tr>
+<td> HAPI-0524: Unknown search parameter &lt;x&gt; for resource type "CarePlan". Valid search parameters for this search are: ....</td></tr>
 
 <tr><td>Must be a valid search parameter value </td>
 <td> 400 Bad request </td>
 <td>not-supported</td>
-<td> Invalid request: The FHIR endpoint on this server does not know how to handle GET operation[DiagnosticReport/DiagnosticReport] with parameters &lt;x&gt;</td></tr>
+<td> Invalid request: The FHIR endpoint on this server does not know how to handle GET operation &lt;x&gt; with parameters &lt;y&gt;</td></tr>
 </table>
 
