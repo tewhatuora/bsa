@@ -17,6 +17,6 @@ jobs:
 
     steps:
      - name: 'Trigger IG Build'
-        run: |
+       run: |
           curl --location 'https://fhir-ig-builder.api-uat.digital.health.nz/v1/build' --header 'x-api-key: '"$ API_TOKEN"'' \ 
           --header 'Content-Type: application/json' --data '{"igSourceGitUrl":"https://github.com/tewhatuora/bsa.git", "gitBranch":"master", "publishToRegistry": false}'
