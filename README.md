@@ -29,7 +29,7 @@ missing oids for terminology
  It will also a allows us to lock the server down to just the operations we want to support, reducing attack surface area.
  
 ### How to build automatically
-Commiting to master triggers a UAT build
+Commiting to master triggers a UAT build on the [TWO build pipeline](https://github.com/tewhatuora/fhir-ig-builder)
 
 
 ### How to build manually
@@ -42,4 +42,4 @@ Then you can initiate the build with a curl command
 
  
  
-  
+   
