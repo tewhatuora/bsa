@@ -1,7 +1,7 @@
 
 # bsa-fhir-ig
 
-This is the source code for the BSA FHIR IG
+This is the source code for the BSA FHIR IG 
 
 
 ## Change log
