@@ -24,7 +24,7 @@ dependencies:
   hl7.fhir.uv.extensions.r4: 5.3.0
 
   fhir.org.nz.ig.base:
-    uri: 'http://fhir.org.nz/ig/base/ImplementationGuide/fhir.org.nz.ig.base/'
+    uri: http://fhir.org.nz/ig/base
     version: 3.0.0
     tewhatuora.digitaltooling: 0.0.11
    

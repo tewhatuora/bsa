@@ -1,6 +1,7 @@
 Extension: PathwayStateExtension
 Id: pathway-state
 Title: "Pathway State Extension"
+Description: "The current state of the participant within the screening pathway."
 * ^url =  $Extension-pathway-state
 * ^version = "1.0.0"
 * ^context.type = #element
