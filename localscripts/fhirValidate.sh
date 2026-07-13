@@ -7,8 +7,10 @@ cd ./output
 rm -r ./temp
 mkdir ./temp
 
-where validator_cli.jar
 
+
+wget -e  https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar  >/dev/null 2>&1  
+whereis validator_cli.jar
 echo validating CarePlan examples
 cp ../fsh-generated/resources/CarePlan*.json ./temp
 cp ../fsh-generated/resources/Bundle-CP*.json ./temp
