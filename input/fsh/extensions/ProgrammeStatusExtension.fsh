@@ -2,7 +2,7 @@ Extension: ProgrammeStatusExtension
 Id: programme-status
 Title: "Programme Status Extension"
 Description: "The enrollment status of a participant in the breast screening programme."
-* ^url = "https://breastscreening.health.nz/ig/StructureDefinition/programme-status"
+* ^url = $Extension-programme-status 
 * ^version = "1.0.0"
 * ^context.type = #element
 * ^context.expression = "CarePlan"

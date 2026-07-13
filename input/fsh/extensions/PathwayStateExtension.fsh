@@ -1,7 +1,7 @@
 Extension: PathwayStateExtension
 Id: pathway-state
 Title: "Pathway State Extension"
-* ^url = "https://breastscreening.health.nz/ig/StructureDefinition/pathway-state"
+* ^url =  $Extension-pathway-state
 * ^version = "1.0.0"
 * ^context.type = #element
 * ^context.expression = "CarePlan"

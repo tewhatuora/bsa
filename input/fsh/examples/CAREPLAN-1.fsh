@@ -5,19 +5,19 @@ Usage: #example
 * id = "CP1"
 
 
-* extension[0].url = "https://breastscreening.health.nz/ig/StructureDefinition/programme-status"
+* extension[0].url = $Extension-programme-status
 * extension[=].valueCodeableConcept.coding.system = $CodeSystem-programme-status
 * extension[=].valueCodeableConcept.coding.code = #not-enrolled 
 
-* extension[+].url = "https://breastscreening.health.nz/ig/StructureDefinition/pathway-state"
+* extension[+].url = $Extension-pathway-state
 * extension[=].valueCodeableConcept.coding.system = $CodeSystem-pathway-state
 * extension[=].valueCodeableConcept.coding.code = #exited
 
-* extension[+].url = "https://breastscreening.health.nz/ig/StructureDefinition/pathway-substate"
+* extension[+].url =  $Extension-pathway-substate
 * extension[=].valueCodeableConcept.coding.system = $CodeSystem-pathway-substate
 * extension[=].valueCodeableConcept.coding.code =  #deceased 
 
-* extension[+].url = "https://breastscreening.health.nz/ig/StructureDefinition/pathway-state-date-last-modified"
+* extension[+].url =  $Extension-pathway-state-date-last-modified  
 * extension[=].valueDateTime = "2025-11-07T13:16:36+00:00"
 * status = #on-hold
 * intent = #plan

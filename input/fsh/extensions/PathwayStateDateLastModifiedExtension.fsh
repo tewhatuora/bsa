@@ -2,7 +2,7 @@ Extension: PathwayStateDateLastModifiedExtension
 Id: pathway-state-date-last-modified
 Title: "Pathway State Date Last Modified Extension"
 Description: "The date when the pathway state was last modified."
-* ^url =  "https://breastscreening.health.nz/ig/StructureDefinition/pathway-state-date-last-modified"
+* ^url =  $Extension-pathway-state-date-last-modified
 * ^version = "1.0.0"
 * ^context.type = #element
 * ^context.expression = "CarePlan"
