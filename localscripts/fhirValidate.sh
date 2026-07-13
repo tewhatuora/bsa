@@ -16,4 +16,5 @@ rm ./*temp/*.json
 
 cd ..
 
-
+pandoc ./output/validation_CarePlan.html -f html -t markdown -o ./validation_CarePlan.md
+cat ./validation_CarePlan.md >> $GITHUB_STEP_SUMMARY
