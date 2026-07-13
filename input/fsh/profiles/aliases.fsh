@@ -1,7 +1,7 @@
 
 
 Alias: $CodeSystem-programme-status = https://standards.digital.health.nz/ns/bsa-programme-status
-Alias: $CodeSystem-pathway-state = https://standards.digital.health.nz/ns/bas-pathway-state
+Alias: $CodeSystem-pathway-state = https://standards.digital.health.nz/ns/bsa-pathway-state
 Alias: $CodeSystem-pathway-substate =  https://standards.digital.health.nz/ns/bsa-pathway-substate
 
 Alias: $ValueSet-programme-status =   https://nzhts.digital.health.nz/fhir/ValueSet/bsa-programme-status
