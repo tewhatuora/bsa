@@ -22,7 +22,7 @@ Te Puna enables BreastScreen Aotearoa to:
 ### Te Puna's Role in the Screening Journey 
 At a high level, Te Puna acts as the system of record for key BreastScreen Aotearoa information, supporting the participant journey: 
 
-<!-- <img style="width:500px; float:none" src="PathwayImage.png"/> -->
+<img style="width:500px; float:none" src="PathwayImage.png"/> 
 
 
 Te Puna maintains information associated with each stage of this journey and makes relevant information available to authorised users and systems. 
