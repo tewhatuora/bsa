@@ -28,7 +28,11 @@ missing oids for terminology
 1 change to profiled resources instead of unprofiled. It will make it explicit what the server capabilities are making it easier to test and easier for clients to understand what the server offers.
  It will also a allows us to lock the server down to just the operations we want to support, reducing attack surface area.
  
-### How to build
+### How to build automatically
+Commiting to master triggers a UAT build
+
+
+### How to build manually
 This IG is built using the [Te Whaturora IG builder ](https://github.com/tewhatuora/fhir-ig-builder)
 You will need an api key which is issued by the integration team
 Then you can initiate the build with a curl command
@@ -38,4 +42,4 @@ Then you can initiate the build with a curl command
 
  
  
- 
+  
