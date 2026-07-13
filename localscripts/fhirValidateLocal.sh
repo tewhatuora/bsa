@@ -7,8 +7,6 @@ cd ./output
 rm -r ./temp
 mkdir ./temp
 
-where validator_cli.jar
-
 echo validating CarePlan examples
 cp ../fsh-generated/resources/CarePlan*.json ./temp
 cp ../fsh-generated/resources/Bundle-CP*.json ./temp

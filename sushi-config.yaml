@@ -50,7 +50,7 @@ menu:
   Terminology: terminology.html
   Table of Contents: toc.html
   Artifact Index: artifacts.html
-  Extensions: careplan-extensions.html
+
   Support:
     FHIR Spec: new-tab http://hl7.org/fhir/R4/index.html
     Download IG: full-ig.zip
