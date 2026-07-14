@@ -16,7 +16,7 @@ Usage: #definition
 * contact.name = "Pat Ryan"
 * contact.telecom.system = #email
 * contact.telecom.value = "pat.ryan@health.govt.nz"
-* description = "BSA FHIR Capabilities !!"
+* description = "BSA FHIR Capabilities"
 * name = "BSACapabilityStatement"
 * title = "BSA FHIR API Capability Statement"
 
