@@ -10,12 +10,21 @@ Usage: #definition
 * fhirVersion = #4.0.1
 * format = #json
 * patchFormat = #json
+* version = "1.1.0"
 
 * publisher = "New Zealand Ministry of Health"
 * contact.name = "Pat Ryan"
 * contact.telecom.system = #email
 * contact.telecom.value = "pat.ryan@health.govt.nz"
 * description = "BSA FHIR Capabilities"
+
+* implementation.description = "Health NZ | Te Whatu Ora NZ Breats Screenign Aotearoa API"
+* implementation.url = "https://fhir-ig-uat.digital.health.nz/bsa"
+
+* extension[HnzApiSpecBuilderExtension].extension[licenseURL].valueUri = "https://www.tewhatuora.govt.nz/assets/Our-health-system/Digital-health/Digital-Service-Hub/API-Access-and-Use-Agreement.docx"
+* extension[HnzApiSpecBuilderExtension].extension[licenseName].valueString = "Health New Zealand Digital Services Hub API Access and Use Agreement"
+* extension[HnzApiSpecBuilderExtension].extension[externalDocs].valueUri = "https://fhir-ig-uat.digital.health.nz/bsa"
+
 * rest.mode = #server
 
 * rest.resource.type = #DiagnosticReport

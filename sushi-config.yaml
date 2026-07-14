@@ -26,7 +26,8 @@ dependencies:
   fhir.org.nz.ig.base:
     uri: http://fhir.org.nz/ig/base
     version: 3.0.0
-    tewhatuora.digitaltooling: 0.0.11
+    
+  tewhatuora.digitaltooling: 0.0.11
    
 fhirVersion: 4.0.1
 parameters:
