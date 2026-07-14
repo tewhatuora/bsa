@@ -6,7 +6,7 @@ Usage: #definition
 
 * status =  #draft
 * date = "2023-05-24"
-* kind = #requirements
+* kind = #instance
 * fhirVersion = #4.0.1
 * format = #json
 * patchFormat = #json
@@ -18,7 +18,11 @@ Usage: #definition
 * contact.telecom.value = "pat.ryan@health.govt.nz"
 * description = "BSA FHIR Capabilities"
 
-* implementation.description = "Health NZ | Te Whatu Ora NZ Breats Screenign Aotearoa API"
+* name = "BSACapabilityStatement"
+* title = "BSA FHIR API Capability Statement"
+
+
+* implementation.description = "Health NZ | Te Whatu Ora NZ Breats Screening Aotearoa API"
 * implementation.url = "https://fhir-ig-uat.digital.health.nz/bsa"
 
 * extension[HnzApiSpecBuilderExtension].extension[licenseURL].valueUri = "https://www.tewhatuora.govt.nz/assets/Our-health-system/Digital-health/Digital-Service-Hub/API-Access-and-Use-Agreement.docx"
