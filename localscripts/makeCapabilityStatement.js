@@ -49,7 +49,7 @@ if (fs.existsSync(rootPath)) {
             let contents = fs.readFileSync(fullFileName).toString();
             let capStmt = JSON.parse(contents)
             console.log("processing capability statement named : " + capStmt.id)
-			   ar.push('<div><strong>Capability Statement: <a href ="CapabilityStatement-' + capStmt.id + '.html">' + capStmt.id +  '</strong></div>')
+			   ar.push('<div><strong>Capability Statement: <a href ="CapabilityStatement-' + capStmt.id + '.html">' + capStmt.id +  '</a></strong></div>')
             if (capStmt.description) {
 				  
                 //ar.push('<div><h3>'+capStmt.description+ "</h3></div>") 
