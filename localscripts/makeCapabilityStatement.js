@@ -262,6 +262,7 @@ ar.push("</div>")
 let file1 = ar.join('\r\n')
 //fs.writeFileSync(outFile,file1);
 fs.writeFileSync(outFile1,file1);
+console.log("writing output to " +outFile1 )
 
 
 
