@@ -40,6 +40,10 @@ Then you can initiate the build with a curl command
 `curl --location 'https://fhir-ig-builder.api-uat.digital.health.nz/v1/build' --header 'x-api-key: My API Key' --header 'Content-Type: application/json' --data '{"igSourceGitUrl":"https://github.com/tewhatuora/bsa.git", "gitBranch":"master", "publishToRegistry": false}'`~
 
 
+### OpenAPI
+The openaPI spec was generated using the  https://github.com/tewhatuora/fhir-openapi-converter, run locally with the command
+`node .\src\cli.js --remoteUrl https://fhir-ig-uat.digital.health.nz/bsa/package.tgz`
+
  
  
    
