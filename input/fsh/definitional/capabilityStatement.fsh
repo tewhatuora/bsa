@@ -1,5 +1,5 @@
 Instance: BSACapabilityStatement
-InstanceOf: CapabilityStatement
+InstanceOf: HnzToolingCapabilityStatement
 Usage: #definition
 
 
