@@ -51,12 +51,13 @@ menu:
   Terminology: terminology.html
   Table of Contents: toc.html
   Artifact Index: artifacts.html
-  View OpenAPI: new-tab https://fhir-ig.digital.health.nz/openapi/index.html?urls.primaryName=BSACapabilityStatement
+  
 
   Support:
     FHIR Spec: new-tab http://hl7.org/fhir/R4/index.html
     Download IG: full-ig.zip
     Artifacts (Json): definitions.json.zip
     Artifacts (Xml): definitions.xml.zip
+    View OpenAPI: new-tab https://fhir-ig.digital.health.nz/openapi/index.html?urls.primaryName=BSACapabilityStatement
    
     
