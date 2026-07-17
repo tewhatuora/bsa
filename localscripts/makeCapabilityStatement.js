@@ -188,7 +188,7 @@ if (fs.existsSync(rootPath)) {
 			    ar.push("<tr><th width='10%'>Name</th><th width='10%'>Verb</th><th width='20%'>URL</th><th width='40%'>Documentation</th><th width='10%'>Scope</th></tr>")
 				capStmt.rest.forEach(function(rest){				
 					rest.operation.forEach(function(ser){
-						  ar.push(`<a name="${ser.name}"> </a>`)   
+						  ar.push(`${ser.name}"> `)   
 	                      
 					 
 						ar.push("<tr>")
