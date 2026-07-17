@@ -218,4 +218,3 @@ This ensures that CarePlan instances conforming to the breast screening profile 
 - [Pathway State CodeSystem](CodeSystem-pathway-state.html)
 - [Pathway Substate CodeSystem](CodeSystem-pathway-substate.html)
 - [Programme Status CodeSystem](CodeSystem-programme-status.html)
-- [Profiles and Extensions](profiles-and-extensions.html)

@@ -56,13 +56,13 @@ if (fs.existsSync(rootPath)) {
                 console.log('description: ' + capStmt.description)
             }
             
-            ar.push('<br/><div><h3>' + "REST APIs" + "</h3></div><br/>")
-			ar.push('<br/><h4>' + "Resource Level Interactions" + "</h4>") 
+            ar.push('<div><h3>' + "REST APIs" + "</h3></div>")
+			ar.push('<h4>' + "Resource Level Interactions" + "</h4>") 
             capStmt.rest.forEach(function(rest){
                 rest.resource.forEach(function(res){
 					console.log("res type : " + res.type)
 
-                    ar.push(`<a name="${res.type}"> </a>`)   
+                    //ar.push(`<a name="${res.type}"> </a>`)   
                     
                     ar.push(`<h5>${res.type}</h5>`)   
 					

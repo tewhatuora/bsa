@@ -1,0 +1,20 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "ProgrammeStatusValueSet",
+  "id": "programme-status",
+  "title": "Programme Status Value Set",
+  "description": "Valid codes representing the current programme status of a participant within the screening pathway.",
+  "url": "http://hl7.org.nz/fhir/ig/bsa/ValueSet/programme-status",
+  "version": "1.0.0",
+  "experimental": false,
+  "date": "2025-11-14",
+  "publisher": "Breast Screening New Zealand",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org.nz/fhir/ig/bsa/CodeSystem/programme-status"
+      }
+    ]
+  }
+}

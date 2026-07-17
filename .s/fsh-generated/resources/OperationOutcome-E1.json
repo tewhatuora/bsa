@@ -1,0 +1,11 @@
+{
+  "resourceType": "OperationOutcome",
+  "id": "E1",
+  "issue": [
+    {
+      "severity": "error",
+      "code": "processing",
+      "diagnostics": "HAPI-0524: Unknown search parameter"
+    }
+  ]
+}

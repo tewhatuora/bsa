@@ -13,9 +13,10 @@ Usage: #definition
 * version = "1.1.0"
 
 * publisher = "New Zealand Ministry of Health"
-* contact.name = "Pat Ryan"
-* contact.telecom.system = #email
-* contact.telecom.value = "pat.ryan@health.govt.nz"
+
+* contact[+].name = "Health New Zealand Te Whatu Ora"
+* contact[=].telecom.value = "https://www.tewhatuora.govt.nz"
+* contact[=].telecom.system = #url
 * description = "BSA FHIR Capabilities"
 * name = "BSACapabilityStatement"
 * title = "BSA FHIR API Capability Statement"
@@ -44,7 +45,7 @@ Usage: #definition
 //comma delimited fields in documentation string extracted by makeCapabilityStatement.js:   <verb,url,doc,scope>
 * rest.resource[=].interaction[=].documentation = "GET,[base]/DiagnosticReport/[id],Used to retrieve a participant's BSA screening outcomes and radiologist assessment reports, system/DiagnosticReport.r"
 * rest.resource[=].interaction[+].code = #search-type
-* rest.resource[=].interaction[=].documentation = "GET,[base]/Coverage, Search for a patient's  participant's BSA screening outcomes and radiologist assessment reports,system/DiagnosticReport.s"
+* rest.resource[=].interaction[=].documentation = "GET,[base]/DiagnosticReport, Search for a patient's  participant's BSA screening outcomes and radiologist assessment reports,system/DiagnosticReport.s"
 
 * rest.resource[=].searchParam[0].name = "patient"
 * rest.resource[=].searchParam[0].type = #reference
@@ -63,12 +64,12 @@ Usage: #definition
 * rest.resource[=].searchParam[3].documentation = "Which diagnostic discipline/department created the report"
 
 * rest.resource[+].type = #CarePlan
-* rest.resource.documentation = "Describes a participant's BSA screening enrolment and pathway status"
+* rest.resource[=].documentation = "Describes a participant's BSA screening enrolment and pathway status"
 * rest.resource[=].profile = $Profile-BsaCarePlan
 * rest.resource[=].interaction[0].code = #read
-* rest.resource[=].interaction[=].documentation = "GET,[base]/DiagnosticReport/[id],Used to retrieve a participant's BSA screening enrolment and pathway status, system/CarePlan.r"
+* rest.resource[=].interaction[=].documentation = "GET,[base]/CarePlan/[id],Used to retrieve a participant's BSA screening enrolment and pathway status, system/CarePlan.r"
 * rest.resource[=].interaction[+].code = #search-type
-* rest.resource[=].interaction[=].documentation = "GET,[base]/Coverage, Search for a participant's BSA screening enrolment and pathway status,system/CarePlan.s"
+* rest.resource[=].interaction[=].documentation = "GET,[base]/CarePlan, Search for a participant's BSA screening enrolment and pathway status,system/CarePlan.s"
 
 * rest.resource[=].searchParam[0].name = "patient"
 * rest.resource[=].searchParam[0].type = #reference

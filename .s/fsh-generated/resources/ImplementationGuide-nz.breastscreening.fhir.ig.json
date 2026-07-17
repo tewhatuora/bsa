@@ -1,0 +1,287 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "nz.breastscreening.fhir.ig",
+  "url": "http://fhir.org.nz/ig/base/ImplementationGuide/fhir.org.nz.ig.base/ImplementationGuide/nz.breastscreening.fhir.ig",
+  "version": "1.1.0",
+  "name": "BreastScreeningNZFHIRImplementationGuide",
+  "title": "Breast Screening NZ FHIR Implementation Guide",
+  "status": "draft",
+  "publisher": "Te Whatu Ora",
+  "contact": [
+    {
+      "name": "Te Whatu Ora",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "mailto:integration@health.govt.nz"
+        }
+      ]
+    }
+  ],
+  "description": "The FHIR  API for  BSA",
+  "packageId": "nz.breastscreening.fhir.ig",
+  "license": "CC0-1.0",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "hl7.fhir.uv.tools.r4",
+      "version": "1.1.2",
+      "uri": "http://hl7.org/fhir/tools",
+      "id": "hl7_fhir_uv_tools_r4"
+    },
+    {
+      "packageId": "hl7.fhir.uv.extensions.r4",
+      "version": "5.3.0",
+      "uri": "http://hl7.org/fhir/extensions",
+      "id": "hl7_fhir_uv_extensions_r4"
+    },
+    {
+      "packageId": "fhir.org.nz.ig.base",
+      "uri": "http://fhir.org.nz/ig/base",
+      "version": "3.0.0",
+      "id": "fhir_org_nz_ig_base"
+    },
+    {
+      "packageId": "tewhatuora.digitaltooling",
+      "version": "0.0.11",
+      "uri": "https://fhir-ig.digital.health.nz/hnz-digital-tooling/ImplementationGuide/tewhatuora.digitaltooling",
+      "id": "tewhatuora_digitaltooling"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/BsaCarePlan"
+        },
+        "name": "BSA Care Plan",
+        "description": "Describes a participant's BSA screening enrolment and pathway status",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/BsaDiagnosticReport"
+        },
+        "name": "BSA Diagnostic Report",
+        "description": "Describes a participant's BSA screening outcomes and radiologist assessment reports",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CapabilityStatement/BSACapabilityStatement"
+        },
+        "name": "BSA FHIR API Capability Statement",
+        "description": "BSA FHIR Capabilities",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "OperationOutcome/E1"
+        },
+        "name": "bsa-error-response-1",
+        "description": "Example of an error response message",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "CarePlan/CP1"
+        },
+        "name": "CAREPLAN-1",
+        "description": "Example BSA Care Plan resource",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/CPB1"
+        },
+        "name": "CAREPLAN-BUNDLE-11",
+        "description": "Example BSA Care Plan search result",
+        "exampleCanonical": "http://hl7.org.nz/fhir/ig/bsa/StructureDefinition/BsaCarePlan"
+      },
+      {
+        "reference": {
+          "reference": "DiagnosticReport/DR1"
+        },
+        "name": "DIAGNOSTICREPORT-1",
+        "description": "Example BSA Diagnostic Report resource",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/DRB1"
+        },
+        "name": "DIAGNOSTICREPORT-BUNDLE-1",
+        "description": "Example BSA Diagnostic Report search result",
+        "exampleCanonical": "http://hl7.org.nz/fhir/ig/bsa/StructureDefinition/BsaDiagnosticReport"
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/pathway-state"
+        },
+        "name": "Pathway State Code System",
+        "description": "Codes representing states in the screening pathway workflow.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/pathway-state-date-last-modified"
+        },
+        "name": "Pathway State Date Last Modified Extension",
+        "description": "The date when the pathway state was last modified.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/pathway-state"
+        },
+        "name": "Pathway State Extension",
+        "description": "The current state of the participant within the screening pathway.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/pathway-state"
+        },
+        "name": "Pathway State Value Set",
+        "description": "Valid codes representing the current state of a participant within the screening pathway.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/pathway-substate"
+        },
+        "name": "Pathway Sub-State Value Set",
+        "description": "Valid codes representing the current sub-state of a participant within the screening pathway.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/pathway-substate"
+        },
+        "name": "Pathway Substate Code System",
+        "description": "Codes for detailed substates within the screening pathway, providing additional granularity to pathway states.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/pathway-substate"
+        },
+        "name": "Pathway Substate Extension",
+        "description": "The current substate of the participant within the screening pathway.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/programme-status"
+        },
+        "name": "Programme Status Code System",
+        "description": "Codes representing a participant's enrollment status in the breast screening programme.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/programme-status"
+        },
+        "name": "Programme Status Extension",
+        "description": "The enrollment status of a participant in the breast screening programme.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/programme-status"
+        },
+        "name": "Programme Status Value Set",
+        "description": "Valid codes representing the current programme status of a participant within the screening pathway.",
+        "exampleBoolean": false
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "API.html",
+          "title": "API",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "businessView.html",
+          "title": "Business View",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "careplan-extensions.html",
+          "title": "Careplan Extensions",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "data-model.html",
+          "title": "Data Model",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "developerGuide.html",
+          "title": "Developer Guide",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "getCarePlan.html",
+          "title": "Get Care Plan",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "getDiagnosticReport.html",
+          "title": "Get Diagnostic Report",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "index2.html",
+          "title": "Index 2",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "profiles.html",
+          "title": "Profiles",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "scope.html",
+          "title": "Scope",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "terminology.html",
+          "title": "Terminology",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "usecases.html",
+          "title": "Usecases",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2020+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "Release"
+      },
+      {
+        "code": "show-inherited-invariants",
+        "value": "false"
+      }
+    ]
+  }
+}

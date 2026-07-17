@@ -8,8 +8,8 @@
 
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 
-id: nz.breastscreening.fhir.ig
-canonical: http://hl7.org.nz/fhir/ig/bsa
+id: tewhatuora.breastscreening
+canonical:  https://fhir-ig.digital.health.nz/bsa
 version: 1.1.0
 name: BreastScreeningNZFHIRImplementationGuide
 title: Breast Screening NZ FHIR Implementation Guide
@@ -17,21 +17,22 @@ status: draft
 publisher:
   name: Te Whatu Ora
   email: mailto:integration@health.govt.nz
-description: The FHIR  API for  BSA
+description: The FHIR API for BSA
 license: CC0-1.0
 dependencies:  
   hl7.fhir.uv.tools.r4: 1.1.2
   hl7.fhir.uv.extensions.r4: 5.3.0
 
   fhir.org.nz.ig.base:
-    uri: http://fhir.org.nz/ig/base
+    uri:  http://fhir.org.nz/ig/base/ImplementationGuide/fhir.org.nz.ig.base
     version: 3.0.0
-    
+  hl7.terminology.r4: 6.5.0
   tewhatuora.digitaltooling: 0.0.11
    
 fhirVersion: 4.0.1
 parameters:
   show-inherited-invariants: false
+  path-suppressed-warnings: suppressed-warnings.txt
 copyrightYear: 2020+
 releaseLabel: Release
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮

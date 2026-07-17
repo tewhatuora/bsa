@@ -1,0 +1,20 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "PathwayStateValueSet",
+  "id": "pathway-state",
+  "title": "Pathway State Value Set",
+  "description": "Valid codes representing the current state of a participant within the screening pathway.",
+  "url": "http://hl7.org.nz/fhir/ig/bsa/ValueSet/pathway-state",
+  "version": "1.0.0",
+  "experimental": false,
+  "date": "2025-11-14",
+  "publisher": "Breast Screening New Zealand",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org.nz/fhir/ig/bsa/CodeSystem/pathway-state"
+      }
+    ]
+  }
+}

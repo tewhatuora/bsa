@@ -1,0 +1,37 @@
+{
+  "resourceType": "DiagnosticReport",
+  "id": "DR1",
+  "status": "final",
+  "subject": {
+    "type": "https://standards.digital.health.nz/ns/nhi-id",
+    "identifier": {
+      "value": "ZKP3289"
+    },
+    "display": "Participant NHI Id"
+  },
+  "issued": "2005-05-16T00:00:00+00:00",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "18748-4"
+      }
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+          "code": "RAD"
+        }
+      ]
+    }
+  ],
+  "presentedForm": [
+    {
+      "contentType": "text/html",
+      "data": "SGVsbG8gV29ybGQhISE="
+    }
+  ]
+}

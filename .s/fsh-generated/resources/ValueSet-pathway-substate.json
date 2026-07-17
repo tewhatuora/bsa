@@ -1,0 +1,20 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "PathwaySubStateValueSet",
+  "id": "pathway-substate",
+  "title": "Pathway Sub-State Value Set",
+  "description": "Valid codes representing the current sub-state of a participant within the screening pathway.",
+  "url": "http://hl7.org.nz/fhir/ig/bsa/ValueSet/pathway-substate",
+  "version": "1.0.0",
+  "date": "2025-11-14",
+  "publisher": "Breast Screening New Zealand",
+  "experimental": false,
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org.nz/fhir/ig/bsa/CodeSystem/pathway-substate"
+      }
+    ]
+  }
+}
