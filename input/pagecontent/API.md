@@ -1,4 +1,6 @@
-###Capability Statement:[CapabilityStatement  BSACapabilityStatement](CapabilityStatement-BSACapabilityStatement.html)
+###Capability Statement###
+
+[BSACapabilityStatement](CapabilityStatement-BSACapabilityStatement.html)
 ###REST APIs
 ####Resource Level Interactions
 
