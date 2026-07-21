@@ -46,7 +46,7 @@ if (fs.existsSync(rootPath)) {
             let contents = fs.readFileSync(fullFileName).toString();
             let capStmt = JSON.parse(contents)
             console.log("processing capability statement named : " + capStmt.id)
-			   ar.push('###Capability Statement###')
+			   ar.push('### Capability Statement')
 			   ar.push("\r");
 			   ar.push('['+ capStmt.id + '](CapabilityStatement-' + capStmt.id + '.html)')
             if (capStmt.description) {
@@ -55,15 +55,15 @@ if (fs.existsSync(rootPath)) {
                 console.log('description: ' + capStmt.description)
             }
             
-            ar.push('###REST APIs')
-			ar.push('####Resource Level Interactions') 
+            ar.push('### REST APIs')
+			ar.push('#### Resource Level Interactions') 
             capStmt.rest.forEach(function(rest){
                 rest.resource.forEach(function(res){
 					console.log("res type : " + res.type)
 
                     //ar.push(`<a name="${res.type}"> </a>`)   
                     ar.push("\r")
-                    ar.push(`#####${res.type}#####`)   
+                    ar.push(`##### ${res.type} #####`)   
 					
                     if (res.documentation) {
                         let documentation = cleanText(res.documentation) || ""                        
@@ -191,7 +191,7 @@ if (fs.existsSync(rootPath)) {
 
 			if (capStmt.rest.operation) {
 				ar.push("\r")
-				ar.push('####Server Level Interactions') 
+				ar.push('#### Server Level Interactions') 
 				ar.push("**Operations**")
 				ar.push("\r")
                 ar.push("<table><style>table, th, td { border: 1px solid black;border-collapse: collapse;}</style>");
@@ -223,7 +223,7 @@ if (fs.existsSync(rootPath)) {
 			}
 
             if (capStmt.messaging) {	
-				ar.push('###Messages')
+				ar.push('### Messages')
 				ar.push("**Definitions**  ")
 				ar.push("<table class='table table-bordered table-condensed'>")
 			ar.push("<tr><th width='30%'>Name</th><th width='70%'>Definitions</th></tr>")

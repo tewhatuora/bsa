@@ -1,10 +1,10 @@
-###Capability Statement###
+### Capability Statement
 
 [BSACapabilityStatement](CapabilityStatement-BSACapabilityStatement.html)
-###REST APIs
-####Resource Level Interactions
+### REST APIs
+#### Resource Level Interactions
 
-#####DiagnosticReport#####
+##### DiagnosticReport #####
 <p>Describes a participant's BSA screening outcomes and radiologist assessment reports</p>
   
 **Interactions**  
@@ -57,7 +57,7 @@
 </tr>
 </table>
 
-#####CarePlan#####
+##### CarePlan #####
 <p>Describes a participant's BSA screening enrolment and pathway status</p>
   
 **Interactions**  
