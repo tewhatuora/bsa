@@ -33,6 +33,7 @@ fhirVersion: 4.0.1
 parameters:
   show-inherited-invariants: false
   path-suppressed-warnings: suppressed-warnings.txt
+  generate-uml: source
 copyrightYear: 2020+
 releaseLabel: Release
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
