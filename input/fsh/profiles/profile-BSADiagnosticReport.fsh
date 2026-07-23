@@ -19,7 +19,10 @@ Description:    "Describes a participant's BSA screening outcomes and radiologis
 * resultsInterpreter 0..0
 * imagingStudy 0..0
 * conclusion 0..0
-* conclusionCode 0..0
+* conclusionCode 0..
+
+//restricted
+* effective[x] only dateTime
 
 
 * subject ^short = "NHI Id of Patient enrolled in breast screening"
