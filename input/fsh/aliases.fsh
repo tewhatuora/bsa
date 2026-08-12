@@ -1,4 +1,5 @@
 
+Alias: SCT = http://snomed.info
 
 Alias: $CodeSystem-programme-status = https://fhir-ig.digital.health.nz/bsa/CodeSystem/programme-status
 Alias: $CodeSystem-pathway-state = https://fhir-ig.digital.health.nz/bsa/CodeSystem/pathway-state
@@ -8,6 +9,7 @@ Alias: $ValueSet-programme-status =   https://fhir-ig.digital.health.nz/bsa/Valu
 Alias: $ValueSet-pathway-state =    https://fhir-ig.digital.health.nz/bsa/ValueSet/pathway-state
 Alias: $ValueSet-pathway-substate =   https://fhir-ig.digital.health.nz/bsa/ValueSet/pathway-substate
 Alias: $ValueSet-breast-site =   https://fhir-ig.digital.health.nz/bsa/ValueSet/breast-site
+Alias: $ValueSet-nature =   https://fhir-ig.digital.health.nz/bsa/ValueSet/breast-site
 
 Alias: $Profile-BsaCarePlan =  https://fhir-ig.digital.health.nz/bsa/StructureDefinition/BsaCarePlan
 Alias: $Profile-BsaDiagnosticReport = https://fhir-ig.digital.health.nz/bsa/StructureDefinition/BsaDiagnosticReport

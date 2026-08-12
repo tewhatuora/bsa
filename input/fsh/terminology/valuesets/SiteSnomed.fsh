@@ -1,4 +1,3 @@
-Alias: SCT = http://snomed.info
 
 ValueSet: BsaSiteSnomedSubset
 Id: Bsa-Site-Snomed-Subset
@@ -9,8 +8,8 @@ Description: "describe a breast region"
 * ^version = "1.0.0"
 * ^status = #active
 * ^experimental = false
-* ^date = "2019-05-01T00:00:00+13:00"
-* ^publisher = "New Zealand Ministry of Health"
+* ^date = "2026-08-12T00:00:00+13:00"
+* ^publisher = "Te Whatu Ora - Health New Zealand"
 * ^purpose = "Coded value for breast body site"
 
 * SCT#110494001 "Structure of upper outer quadrant of breast"
