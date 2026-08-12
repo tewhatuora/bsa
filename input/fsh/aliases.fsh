@@ -9,7 +9,10 @@ Alias: $ValueSet-programme-status =   https://fhir-ig.digital.health.nz/bsa/Valu
 Alias: $ValueSet-pathway-state =    https://fhir-ig.digital.health.nz/bsa/ValueSet/pathway-state
 Alias: $ValueSet-pathway-substate =   https://fhir-ig.digital.health.nz/bsa/ValueSet/pathway-substate
 Alias: $ValueSet-breast-site =   https://fhir-ig.digital.health.nz/bsa/ValueSet/breast-site
-Alias: $ValueSet-nature =   https://fhir-ig.digital.health.nz/bsa/ValueSet/breast-site
+Alias: $ValueSet-nature =   https://fhir-ig.digital.health.nz/bsa/ValueSet/breast-nature
+Alias: $ValueSet-category =   https://fhir-ig.digital.health.nz/bsa/ValueSet/breast-category
+Alias: $ValueSet-breast-side =   https://fhir-ig.digital.health.nz/bsa/ValueSet/breast-category
+
 
 Alias: $Profile-BsaCarePlan =  https://fhir-ig.digital.health.nz/bsa/StructureDefinition/BsaCarePlan
 Alias: $Profile-BsaDiagnosticReport = https://fhir-ig.digital.health.nz/bsa/StructureDefinition/BsaDiagnosticReport

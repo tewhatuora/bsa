@@ -12,12 +12,13 @@ Description: "describe nature of mammography  finding"
 * ^publisher = "Te Whatu Ora - Health New Zealand"
 * ^purpose = "Coded value nature of mammography  finding"
 
-* SCT#397141009  "Mammography assessment category 2 - benign finding"
-* SCT#397142002  "Mammography assessment category 3 - probably benign finding"
-* SCT#397143007  "Mammography assessment category 4 - suspicious abnormality"
-* SCT#397144001  "Mammography assessment category 5 - highly suggestive of malignancy"
-* SCT#428169002  "Mammography assessment category 6 - known biopsy proven malignancy"
-
+* SCT#300842002 "Structure of breast mass"
+* SCT#45138006  "Calcification of breast"
+* SCT#470123000 "Spiculated breast mass"
+* SCT#246201001 "Architectural distortion of breast"
+* SCT#1297138000 "Mammographic breast density finding"
+* SCT#246199009 "Multiple masses"
+* SCT#74964007 "Other"
 
 
 
