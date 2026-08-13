@@ -94,8 +94,6 @@ An example request context follows illustrating FHIR API access on behalf of the
 }
 ```
 
-A schema for the Request-Context is [available here](https://github.com/tewhatuora/schemas/blob/main/json-schema/Request-Context-v2.json)
 
-<p>&nbsp;</p>
 
 

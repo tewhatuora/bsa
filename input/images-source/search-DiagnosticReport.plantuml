@@ -3,7 +3,7 @@ skinparam sequenceArrowThickness 2
 skinparam roundcorner 5
 skinparam maxmessagesize 180
 skinparam sequenceParticipant bold
-title  AllergyIntolerance Search
+title  DiagnosticReport Search
 participant "FHIR Client" as A #CornflowerBlue
 participant "BSA Service " as B #CornflowerBlue
 participant "BSA FHIR database" as C #CornflowerBlue

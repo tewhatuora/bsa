@@ -36,7 +36,7 @@ The Te Puna FHIR API exposes selected information held within Te Puna enabling a
 ### Business Rules 
 #### Searching Care Plan 
 
-The participants NHI is usually used to get their Care Plan details, although there are options to include a status parameter to narrow down the results, e.g. draft, active, ended 
+The participant's NHI is usually used to get their Care Plan details, although there are options to include a status parameter to narrow down the results, e.g. draft, active, ended 
 
 There is an option to return all plans between a date range or by status. Where a status is used then multiple different status can be entered but must be comma separated. These types of calls will return a large result set.
 
@@ -53,9 +53,9 @@ Searching on just the Status is allowed, with options to search by Final, or Pre
 
 Screening Use Case Summary
 
-- Care Plan - the participants overall participation in the BreastScreen Aotearoa programme.
+- Care Plan - the participant's overall participation in the BreastScreen Aotearoa programme.
  
-- Dagnostic Report - a participants Radiologist report 
+- Dagnostic Report - a participant's Radiologist report 
 
   
 
