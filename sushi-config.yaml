@@ -35,7 +35,8 @@ parameters:
   path-suppressed-warnings: suppressed-warnings.txt
 
 copyrightYear: 2020+
-releaseLabel: Release
+# releaseLabel: Release
+releaseLabel: CI Build
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 
 # │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │

@@ -1,6 +1,6 @@
-# Breast Screening NZ – CPIR FHIR Implementation Guide
+# Breast Screening NZ – BSA FHIR Implementation Guide
 
-**Version:** 1.0.0  
+**Version:** 1.1.0  
 **Status:** Draft  
 **FHIR Version:** R4
 
@@ -21,15 +21,15 @@ The purpose of this guide is to document:
 
 * **Business view:** The Business context of the NHI
 
-* **Use Cases:**  The expected Use Cases including the FHIR interactions that the NHI supports.
+* **Use Cases:**  The expected Use Cases including the FHIR interactions that the BSA FHIR server supports.
 
-* **API:** Information on the specific features supported by the API.
+* **API:** Information on the specific features of the BSA FHIR server APIs.
 
-* **Profiles:** Details of the data elements included in the NHI Patient and NHI Address profiles.
+* **Profiles:** Details of the data elements included in the BSACarePlan and BSADiagnosticReport profiles.
 
 * **Extensions:** List of extensions defined by the guide.
 
-* **Terminology:** List of the FHIR terminology artifacts defined within this implementation guide [For other FHIR terminology see the HL7® FHIR® New Zealand Base Implementation Guide](https://fhir.org.nz/ig/base/index.html). Links can be found from each of the artifacts in the patient and address profiles).
+* **Terminology:** List of the FHIR terminology artifacts defined within this implementation guide
 
 
 * **Artifact Index:**  This is a tab automatically generated during the build of the Implementation Guide, and lists all the FHIR artifacts defined by the guide with a link to the details.
