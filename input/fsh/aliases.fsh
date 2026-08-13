@@ -13,7 +13,6 @@ Alias: $ValueSet-nature =   https://fhir-ig.digital.health.nz/bsa/ValueSet/breas
 Alias: $ValueSet-category =   https://fhir-ig.digital.health.nz/bsa/ValueSet/breast-category
 Alias: $ValueSet-breast-side =   https://fhir-ig.digital.health.nz/bsa/ValueSet/breast-category
 
-
 Alias: $Profile-BsaCarePlan =  https://fhir-ig.digital.health.nz/bsa/StructureDefinition/BsaCarePlan
 Alias: $Profile-BsaDiagnosticReport = https://fhir-ig.digital.health.nz/bsa/StructureDefinition/BsaDiagnosticReport
 
