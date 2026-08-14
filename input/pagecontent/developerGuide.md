@@ -45,6 +45,22 @@ Preferred less than 64 characters <br /> </td>
 </table>
 
 
+### References
+References to Patients and Provider Organisations should be in the form of [Logical References](http://hl7.org/fhir/R4/references.html#logical)
+- e.g. the logical reference to the subject of a CarePlan would look like this
+
+```
+ "subject": {
+          "type": "Patient",
+          "identifier": {
+            "value": "ZXE24NV"
+          }
+```
+It is  the responsibility of the client to determine the correct URL to sue when resolving the reference.
+The Patient identifier will always be an NHI, and it should be resolved by calling the the [NHIPatient service](https://nhi-ig.hip.digital.health.nz/StructureDefinition-NhiPatient.html)
+The Organisation identifier will always by an HPI Org ID, and it should be resolved by calling the the [HPIOrganization service](https://hpi-ig.hip.digital.health.nz/StructureDefinition-HpiOrganization.html).
+
+
 ### Security
 
 #### OAUTH2

@@ -12,7 +12,7 @@ Usage: #example
 * entry[=].resource.id = "DR123"
 * entry[=].resource.status = #final
 
-* entry[=].resource.subject.type = "https://standards.digital.health.nz/ns/nhi-id"
+* entry[=].resource.subject.type = "Patient"
 * entry[=].resource.subject.identifier.value = "ZJM9397"
 * entry[=].resource.issued = "2005-05-16T00:00:00+00:00"
 * entry[=].resource.code.coding.system = "http://loinc.org"
@@ -28,7 +28,7 @@ Usage: #example
 * entry[=].resource.id = "DR456"
 * entry[=].resource.status = #preliminary
 
-* entry[=].resource.subject.type = "https://standards.digital.health.nz/ns/nhi-id"
+* entry[=].resource.subject.type = "Patient"
 * entry[=].resource.subject.identifier.value = "ZUA48EH"
 * entry[=].resource.issued = "2025-05-16T00:00:00+00:00"
 * entry[=].resource.code.coding.system = "http://loinc.org"

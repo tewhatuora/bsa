@@ -21,11 +21,11 @@ Usage: #example
 * extension[=].valueDateTime = "2025-11-07T13:16:36+00:00"
 * status = #on-hold
 * intent = #plan
-* subject.type = "https://standards.digital.health.nz/ns/nhi-id"
+* subject.type = "Patient"
 * subject.identifier.value = "ZXE24NV"
-* subject.display = "Participant NHI Id"
 * period.start = "2005-05-16T00:00:00+00:00" 
 * period.end = "2017-08-13T12:00:00+00:00"
-* author.type = "https://standards.digital.health.nz/ns/hpi-organisation-id"
+
+* author.type = "Organization"
 * author.identifier.value = "GZZ991-D"
 * author.display = "Lead Provider HPI Org ID"
