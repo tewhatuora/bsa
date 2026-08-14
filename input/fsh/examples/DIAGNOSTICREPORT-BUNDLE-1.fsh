@@ -11,7 +11,9 @@ Usage: #example
 * entry[=].fullUrl = "https://bsa-uat.pinga.health/fhir/DiagnosticReport/DR123"
 * entry[=].resource.id = "DR123"
 * entry[=].resource.status = #final
-* entry[=].resource.subject =  Reference(Patient/ZJM9397)
+
+* entry[=].resource.subject.type = "https://standards.digital.health.nz/ns/nhi-id"
+* entry[=].resource.subject.identifier.value = "ZJM9397"
 * entry[=].resource.issued = "2005-05-16T00:00:00+00:00"
 * entry[=].resource.code.coding.system = "http://loinc.org"
 * entry[=].resource.code.coding.code = #18748-4
@@ -25,7 +27,9 @@ Usage: #example
 * entry[=].fullUrl = "https://bsa-uat.pinga.health/fhir/DiagnosticReport/DR456"
 * entry[=].resource.id = "DR456"
 * entry[=].resource.status = #preliminary
-* entry[=].resource.subject =  Reference(Patient/ZUA48EH)
+
+* entry[=].resource.subject.type = "https://standards.digital.health.nz/ns/nhi-id"
+* entry[=].resource.subject.identifier.value = "ZUA48EH"
 * entry[=].resource.issued = "2025-05-16T00:00:00+00:00"
 * entry[=].resource.code.coding.system = "http://loinc.org"
 * entry[=].resource.code.coding.code = #18748-4

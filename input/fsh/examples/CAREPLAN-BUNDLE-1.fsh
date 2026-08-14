@@ -21,10 +21,13 @@ Usage: #example
 * entry[=].resource.extension[=].valueDateTime = "2025-11-07T13:16:36+00:00"
 * entry[=].resource.status = #on-hold
 * entry[=].resource.intent = #plan
-* entry[=].resource.subject = Reference(Patient/ZXE24NV)
+* entry[=].resource.subject.type = "https://standards.digital.health.nz/ns/nhi-id"
+* entry[=].resource.subject.identifier.value = "ZXE24NV"
 * entry[=].resource.period.start = "2005-05-16T00:00:00+00:00"
 * entry[=].resource.period.end = "2017-08-13T12:00:00+00:00"
-* entry[=].resource.author = Reference(Organization/GZZ956-B)
+* entry[=].resource.author.type = "https://standards.digital.health.nz/ns/hpi-organisation-id"
+* entry[=].resource.author.identifier.value = "GZZ956-B"
+
 
 
 * entry[+].resource.resourceType = "CarePlan"
@@ -45,6 +48,8 @@ Usage: #example
 * entry[=].resource.extension[=].valueDateTime = "2025-11-07T13:16:36+00:00"
 * entry[=].resource.status = #active
 * entry[=].resource.intent = #plan
-* entry[=].resource.subject = Reference(Patient/ZUA48EH)
+* entry[=].resource.subject.type = "https://standards.digital.health.nz/ns/nhi-id"
+* entry[=].resource.subject.identifier.value = "ZUA48EH"
 * entry[=].resource.period.start = "2015-05-16T00:00:00+00:00"
-* entry[=].resource.author = Reference(Organization/GZZ956-B) 
+* entry[=].resource.author.type = "https://standards.digital.health.nz/ns/hpi-organisation-id"
+* entry[=].resource.author.identifier.value = "GZZ956-B"

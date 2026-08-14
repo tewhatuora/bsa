@@ -5,7 +5,8 @@ Description: "Example BSA Diagnostic Report resource"
 Usage: #example
 * id = "DR1"
 * status = #final
-* subject = Reference(Patient/ZJM9397)
+* subject.type = "https://standards.digital.health.nz/ns/nhi-id"
+* subject.identifier.value = "ZJM9397"
 
 * issued = "2005-05-16T00:00:00+00:00"
 * code.coding.system = "http://loinc.org"
