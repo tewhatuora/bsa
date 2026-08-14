@@ -6,12 +6,12 @@
 
 <tr>
 <td><a href='StructureDefinition-BsaCarePlan.html'>BsaCarePlan</a></td>
-<td>http://hl7.org.nz/fhir/StructureDefinition/BsaCarePlan</td>
+<td>https://fhir-ig.digital.health.nz/bsa/StructureDefinition/BsaCarePlan</td>
 <td><p>A profile of CarePlan to describe  participant&#39;ss BSA screening enrolment and pathway status</p></td>
 </tr>
 <tr>
 <td><a href='StructureDefinition-BsaDiagnosticReport.html'>BsaDiagnosticReport</a></td>
-<td>http://hl7.org.nz/fhir/StructureDefinition/BsaDiagnosticReport</td>
+<td> https://fhir-ig.digital.health.nz/bsa/StructureDefinition/BsaDiagnosticReport</td>
 <td><p> A profile of DiagnosticReport which describes a participant's BSA screening outcomes and radiologist assessment reports</p></td>
 </tr>
 </table>

@@ -24,5 +24,5 @@ Description:    "Describes a participant's BSA screening outcomes and radiologis
 //restricted
 * effective[x] only dateTime
 
-
+* effective[x] ^short = "Date of the screening event that the report relates to"
 * subject ^short = "NHI Id of Patient enrolled in breast screening"
