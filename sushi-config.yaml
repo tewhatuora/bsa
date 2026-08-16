@@ -13,7 +13,7 @@ canonical:  https://fhir-ig.digital.health.nz/bsa
 version: 1.1.0
 name: BreastScreeningNZFHIRImplementationGuide
 title: Breast Screening NZ FHIR Implementation Guide
-status: draft
+status: active
 publisher:
   name: Te Whatu Ora
   email: mailto:integration@health.govt.nz
@@ -35,8 +35,8 @@ parameters:
   path-suppressed-warnings: suppressed-warnings.txt
 
 copyrightYear: 2020+
-# releaseLabel: Release
-releaseLabel: CI Build
+releaseLabel: Release
+#releaseLabel: CI Build
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
 
 # │  To use a provided ig-data/input/includes/menu.xml file, delete the "menu" property below.     │

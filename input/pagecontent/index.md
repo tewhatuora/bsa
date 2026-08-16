@@ -1,7 +1,7 @@
 # Breast Screening NZ – BSA FHIR Implementation Guide
 
 **Version:** 1.1.0  
-**Status:** Draft  
+**Status:** Release  
 **FHIR Version:** R4
 
 ## Introduction
