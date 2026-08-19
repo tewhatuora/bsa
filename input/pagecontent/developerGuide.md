@@ -68,7 +68,7 @@ This FHIR API uses standard OAUTH bearer token authentication.
 
 All requests to this FHIR API must include an access token in the `Authorization` header.
 
-Authorized clients can obtain access tokens from the Health New Zealand authorization server (KeyCloak) using OAUTH2 Client Credentials flow to request the necessary [OAUTH SMART scopes](api.html).
+Authorized clients can obtain access tokens from the Health New Zealand authorization server (KeyCloak) using OAUTH2 Client Credentials flow to request the necessary [OAUTH SMART scopes](https://build.fhir.org/ig/HL7/smart-app-launch/scopes-and-launch-context.html).
 
 
 
