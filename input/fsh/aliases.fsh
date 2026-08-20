@@ -1,5 +1,6 @@
 
-Alias: SCT = http://snomed.info
+Alias: $SCT = http://snomed.info/sct
+
 
 Alias: $CodeSystem-programme-status = https://fhir-ig.digital.health.nz/bsa/CodeSystem/programme-status
 Alias: $CodeSystem-pathway-state = https://fhir-ig.digital.health.nz/bsa/CodeSystem/pathway-state
