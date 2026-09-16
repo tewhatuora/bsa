@@ -1,7 +1,7 @@
 {
   "info": {
     "_postman_id": "36759f8e-745d-4062-aedf-14dc10061085",
-    "name": "Te Puna New GW",
+    "name": "Te Puna HNZ GW",
     "description": "Demo collection for querying FHIR DiagnosticReport resources by patient NHI, status, and previewing the HTML presentedForm.\n\n## Setup\n1. Set the `base_url` variable to your FHIR server (e.g. https://your-fhir-server.com/fhir)\n2. Set the `patient_nhi` variable to the patient's NHI number\n3. If your server requires auth, set `auth_token` to your Bearer token\n\n## Presented Form (HTML Preview)\nThe last two requests extract the base64-encoded HTML from `presentedForm` and let you view it in Postman's Visualize tab.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "20003468"
@@ -119,7 +119,7 @@
                   "script": {
                     "type": "text/javascript",
                     "exec": [
-                      "pm.test('Status 200', function () {\n    pm.response.to.have.status(200);\n});\n\npm.test('Is a FHIR Bundle', function () {\n    var json = pm.response.json();\n    pm.expect(json.resourceType).to.eql('Bundle');\n});\n\n// Save first report ID for later use\nvar json = pm.response.json();\nif (json.entry && json.entry.length > 0) {\n    var firstId = json.entry[0].resource.id;\n    pm.collectionVariables.set('report_id', firstId);\n    console.log('Saved report_id: ' + firstId);\n}"
+                      "pm.test('Status 400', function () {\n    pm.response.to.have.status(400);\n});\n\npm.test('Is a FHIR OperationOutcome', function () {\n    var json = pm.response.json();\n    pm.expect(json.resourceType).to.eql('OperationOutcome');\n});\n\n// Save first report ID for later use\nvar json = pm.response.json();\nif (json.entry && json.entry.length > 0) {\n    var firstId = json.entry[0].resource.id;\n    pm.collectionVariables.set('report_id', firstId);\n    console.log('Saved report_id: ' + firstId);\n}"
                     ]
                   }
                 }
@@ -219,7 +219,7 @@
                   "script": {
                     "type": "text/javascript",
                     "exec": [
-                      "pm.test('Status 200', function () {\n    pm.response.to.have.status(200);\n});\n\npm.test('Is a FHIR Bundle', function () {\n    var json = pm.response.json();\n    pm.expect(json.resourceType).to.eql('Bundle');\n});\n\n// Save first report ID for later use\nvar json = pm.response.json();\nif (json.entry && json.entry.length > 0) {\n    var firstId = json.entry[0].resource.id;\n    pm.collectionVariables.set('report_id', firstId);\n    console.log('Saved report_id: ' + firstId);\n}"
+                      "pm.test('Status 400', function () {\n    pm.response.to.have.status(400);\n});\n\npm.test('Is a FHIR OperationOutcome', function () {\n    var json = pm.response.json();\n    pm.expect(json.resourceType).to.eql('OperationOutcome');\n});\n\n// Save first report ID for later use\nvar json = pm.response.json();\nif (json.entry && json.entry.length > 0) {\n    var firstId = json.entry[0].resource.id;\n    pm.collectionVariables.set('report_id', firstId);\n    console.log('Saved report_id: ' + firstId);\n}"
                     ]
                   }
                 }
@@ -394,6 +394,17 @@
             },
             {
               "name": "DiagnosticReports – Preliminary only",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test('Status 200', function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test('Is a FHIR Bundle', function () {\r\n    var json = pm.response.json();\r\n    pm.expect(json.resourceType).to.eql('Bundle');\r\n});\r\n\r\n// Save first report ID for later use\r\nvar json = pm.response.json();\r\nif (json.entry && json.entry.length > 0) {\r\n    var firstId = json.entry[0].resource.id;\r\n    pm.collectionVariables.set('report_id', firstId);\r\n    console.log('Saved report_id: ' + firstId);\r\n}"
+                    ]
+                  }
+                }
+              ],
               "request": {
                 "method": "GET",
                 "header": [
@@ -436,6 +447,17 @@
             },
             {
               "name": "DiagnosticReports – Multiple statuses (OR)",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test('Status 200', function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test('Is a FHIR Bundle', function () {\r\n    var json = pm.response.json();\r\n    pm.expect(json.resourceType).to.eql('Bundle');\r\n});\r\n\r\n// Save first report ID for later use\r\nvar json = pm.response.json();\r\nif (json.entry && json.entry.length > 0) {\r\n    var firstId = json.entry[0].resource.id;\r\n    pm.collectionVariables.set('report_id', firstId);\r\n    console.log('Saved report_id: ' + firstId);\r\n}"
+                    ]
+                  }
+                }
+              ],
               "request": {
                 "method": "GET",
                 "header": [
@@ -484,7 +506,7 @@
                   "script": {
                     "type": "text/javascript",
                     "exec": [
-                      "pm.test('Status 200', function () {\n    pm.response.to.have.status(200);\n});\n\npm.test('All results are final', function () {\n    var json = pm.response.json();\n    if (json.entry) {\n        json.entry.forEach(function(e) {\n            pm.expect(e.resource.status).to.eql('final');\n        });\n    }\n});"
+                      "pm.test('Status 200', function () {\n    pm.response.to.have.status(200);\n});\n\npm.test('Is a FHIR Bundle', function () {\n    var json = pm.response.json();\n    pm.expect(json.resourceType).to.eql('Bundle');\n});\n\npm.test('All results are final', function () {\n    var json = pm.response.json();\n    if (json.entry) {\n        json.entry.forEach(function(e) {\n            pm.expect(e.resource.status).to.eql('final');\n        });\n    }\n});"
                     ]
                   }
                 }
@@ -526,6 +548,17 @@
             },
             {
               "name": "By Patient NHI + Date range",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test('Status 200', function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test('Is a FHIR Bundle', function () {\r\n    var json = pm.response.json();\r\n    pm.expect(json.resourceType).to.eql('Bundle');\r\n});\r\n"
+                    ]
+                  }
+                }
+              ],
               "request": {
                 "method": "GET",
                 "header": [
@@ -574,12 +607,18 @@
               "response": []
             },
             {
-              "name": "By Patient NHI + Date range Copy",
-              "protocolProfileBehavior": {
-                "disabledSystemHeaders": {
-                  "accept": true
+              "name": "By Patient NHI + Category RAD",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test('Status 200', function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test('Is a FHIR Bundle', function () {\r\n    var json = pm.response.json();\r\n    pm.expect(json.resourceType).to.eql('Bundle');\r\n});\r\npm.test('All results are RAD', function () {\r\n    var json = pm.response.json();\r\n    if (json.entry) {\r\n        json.entry.forEach(function(e) {\r\n            var code = e.resource.category[0].coding[0].code;\r\n            pm.expect(code).to.eql('RAD');\r\n\r\n        });\r\n    }\r\n});\r\n\r\n"
+                    ]
+                  }
                 }
-              },
+              ],
               "request": {
                 "method": "GET",
                 "header": [
@@ -588,16 +627,12 @@
                     "value": "application/json; charset=UTF-8"
                   },
                   {
-                    "key": "Cache-Control",
-                    "value": "no-cache"
-                  },
-                  {
                     "key": "request-context",
                     "value": "{{request-context}}"
                   }
                 ],
                 "url": {
-                  "raw": "{{base_url}}/DiagnosticReport?patient=ZZZ0008&date=gt2026-04-21&date=le2026-04-21",
+                  "raw": "{{base_url}}/DiagnosticReport?category=RAD",
                   "host": [
                     "{{base_url}}"
                   ],
@@ -605,121 +640,9 @@
                     "DiagnosticReport"
                   ],
                   "query": [
-                    {
-                      "key": "patient",
-                      "value": "ZZZ0008"
-                    },
-                    {
-                      "key": "date",
-                      "value": "gt2026-04-21"
-                    },
-                    {
-                      "key": "date",
-                      "value": "le2026-04-21"
-                    },
-                    {
-                      "key": "_sort",
-                      "value": "-date",
-                      "disabled": true
-                    }
-                  ]
-                },
-                "description": "Combined search with a date range, sorted newest first.\n\nPrefix operators: ge (>=), le (<=), gt (>), lt (<), eq (=)."
-              },
-              "response": []
-            },
-            {
-              "name": "By Patient NHI + Category (LAB)",
-              "request": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/fhir+json"
-                  }
-                ],
-                "url": {
-                  "raw": "{{base_url}}/DiagnosticReport?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|{{patient_nhi}}&category=http://terminology.hl7.org/CodeSystem/v2-0074|LAB",
-                  "host": [
-                    "{{base_url}}"
-                  ],
-                  "path": [
-                    "DiagnosticReport"
-                  ],
-                  "query": [
-                    {
-                      "key": "patient.identifier",
-                      "value": "https://standards.digital.health.nz/ns/nhi-id|{{patient_nhi}}"
-                    },
                     {
                       "key": "category",
-                      "value": "http://terminology.hl7.org/CodeSystem/v2-0074|LAB"
-                    }
-                  ]
-                },
-                "description": "Filter by category = LAB (laboratory reports) for a patient."
-              },
-              "response": []
-            },
-            {
-              "name": "By Patient NHI + Category RAD",
-              "request": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/fhir+json"
-                  }
-                ],
-                "url": {
-                  "raw": "{{base_url}}/DiagnosticReport?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|{{patient_nhi}}&category=http://terminology.hl7.org/CodeSystem/v2-0074|LAB",
-                  "host": [
-                    "{{base_url}}"
-                  ],
-                  "path": [
-                    "DiagnosticReport"
-                  ],
-                  "query": [
-                    {
-                      "key": "patient.identifier",
-                      "value": "https://standards.digital.health.nz/ns/nhi-id|{{patient_nhi}}"
-                    },
-                    {
-                      "key": "category",
-                      "value": "http://terminology.hl7.org/CodeSystem/v2-0074|LAB"
-                    }
-                  ]
-                },
-                "description": "Filter by category = LAB (laboratory reports) for a patient."
-              },
-              "response": []
-            },
-            {
-              "name": "By Patient NHI + Category RAD Copy",
-              "request": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/fhir+json"
-                  }
-                ],
-                "url": {
-                  "raw": "{{base_url}}/DiagnosticReport?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|{{patient_nhi}}&category=http://terminology.hl7.org/CodeSystem/v2-0074|LAB",
-                  "host": [
-                    "{{base_url}}"
-                  ],
-                  "path": [
-                    "DiagnosticReport"
-                  ],
-                  "query": [
-                    {
-                      "key": "patient.identifier",
-                      "value": "https://standards.digital.health.nz/ns/nhi-id|{{patient_nhi}}"
-                    },
-                    {
-                      "key": "category",
-                      "value": "http://terminology.hl7.org/CodeSystem/v2-0074|LAB"
+                      "value": "RAD"
                     }
                   ]
                 },
@@ -733,41 +656,24 @@
           "name": "4. Read Single Report",
           "item": [
             {
-              "name": "GET DiagnosticReport by ID",
-              "request": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/fhir+json"
-                  },
-                  {
-                    "key": "request-context",
-                    "value": "ewogICAgICAidXNlcklkZW50aWZpZXIiOiAiQlNBdGVzdGVyIiwKICAgICAgInVzZXJSb2xlIjogIjExMDE1MCIsCiAgICAgICJwdXJwb3NlT2ZVc2UiOiBbCiAgICAgICAgIlBPUEhMVEgiCiAgICAgIF0sCiAgICAgICJ1c2VyRnVsbE5hbWUiOiAiUGF0IFJ5YW4iCn0"
-                  }
-                ],
-                "url": {
-                  "raw": "{{base_url}}/DiagnosticReport/123",
-                  "host": [
-                    "{{base_url}}"
-                  ],
-                  "path": [
-                    "DiagnosticReport",
-                    "123"
-                  ]
-                },
-                "description": "Read a single DiagnosticReport by its resource ID.\n\nThe `report_id` variable is auto-populated by the first search request, or set it manually."
-              },
-              "response": []
-            },
-            {
               "name": "GET DiagnosticReport by ID DIAGREP-10701",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test('Status 200', function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test('Is a FHIR DiagnosticReport', function () {\r\n    var json = pm.response.json();\r\n    pm.expect(json.resourceType).to.eql('DiagnosticReport');\r\n});"
+                    ]
+                  }
+                }
+              ],
               "request": {
                 "method": "GET",
                 "header": [
                   {
                     "key": "Accept",
-                    "value": "application/fhir+json"
+                    "value": "application/json; charset=UTF-8"
                   },
                   {
                     "key": "request-context",
@@ -791,6 +697,45 @@
                 "description": "Read a single DiagnosticReport by its resource ID.\n\nThe `report_id` variable is auto-populated by the first search request, or set it manually."
               },
               "response": []
+            },
+            {
+              "name": "DiagnosticReports by id with _include",
+              "event": [
+                {
+                  "listen": "test",
+                  "script": {
+                    "type": "text/javascript",
+                    "exec": [
+                      "pm.test('Status 404', function () {\n    pm.response.to.have.status(404);\n});\n\npm.test('Is a FHIR OperationOutcome', function () {\n    var json = pm.response.json();\n    pm.expect(json.resourceType).to.eql('OperationOutcome');\n});\n// Save first report ID for later use\nvar json = pm.response.json();\nif (json.entry && json.entry.length > 0) {\n    var firstId = json.entry[0].resource.id;\n    pm.collectionVariables.set('report_id', firstId);\n    console.log('Saved report_id: ' + firstId);\n}"
+                    ]
+                  }
+                }
+              ],
+              "request": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json; charset=UTF-8"
+                  },
+                  {
+                    "key": "request-context",
+                    "value": "{{request-context}}"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/DiagnosticReport/DIAGREP-10703$_include=DiagnosticReports:patient",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "DiagnosticReport",
+                    "DIAGREP-10703$_include=DiagnosticReports:patient"
+                  ]
+                },
+                "description": "Search for all DiagnosticReport resources for a patient identified by their NHI number.\n\nThe `patient.identifier` parameter uses the chained search format:\n`system|value`"
+              },
+              "response": []
             }
           ]
         },
@@ -805,62 +750,7 @@
                   "script": {
                     "type": "text/javascript",
                     "exec": [
-                      "pm.test('Status 200', function () {",
-                      "    pm.response.to.have.status(200);",
-                      "});",
-                      "",
-                      "var json = pm.response.json();",
-                      "var html = '';",
-                      "",
-                      "if (json.entry && json.entry.length > 0) {",
-                      "    var report = json.entry[0].resource;",
-                      "    ",
-                      "    if (report.presentedForm && report.presentedForm.length > 0) {",
-                      "        for (var i = 0; i < report.presentedForm.length; i++) {",
-                      "            var attachment = report.presentedForm[i];",
-                      "            ",
-                      "            if (attachment.contentType === 'text/html' && attachment.data) {",
-                      "                // Decode base64 HTML",
-                      "                html = atob(attachment.data);",
-                      "                break;",
-                      "            }",
-                      "            ",
-                      "            if (attachment.contentType === 'text/html' && attachment.url) {",
-                      "                html = '<p>HTML is at external URL: ' + attachment.url + '</p>';",
-                      "                html += '<p>Use the \"Fetch presentedForm by URL\" request to retrieve it.</p>';",
-                      "                break;",
-                      "            }",
-                      "        }",
-                      "    }",
-                      "}",
-                      "",
-                      "if (!html) {",
-                      "    html = '<div style=\"font-family:sans-serif;padding:20px;\">',",
-                      "    html += '<h2>No presentedForm HTML found</h2>';",
-                      "    html += '<p>This DiagnosticReport does not contain an inline text/html presentedForm attachment.</p>';",
-                      "    ",
-                      "    if (json.entry && json.entry[0] && json.entry[0].resource.presentedForm) {",
-                      "        html += '<h3>Available presentedForm attachments:</h3><ul>';",
-                      "        json.entry[0].resource.presentedForm.forEach(function(a) {",
-                      "            html += '<li>contentType: ' + (a.contentType || 'N/A');",
-                      "            html += ', has data: ' + (!!a.data) + ', url: ' + (a.url || 'N/A') + '</li>';",
-                      "        });",
-                      "        html += '</ul>';",
-                      "    }",
-                      "    html += '</div>';",
-                      "}",
-                      "",
-                      "// Wrap in a styled container",
-                      "var template = `",
-                      "  <div style='border:1px solid #ddd; border-radius:8px; padding:16px; margin:8px; background:#fff;'>",
-                      "    <div style='font-family:sans-serif; font-size:12px; color:#666; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #eee;'>",
-                      "      FHIR DiagnosticReport – presentedForm HTML Preview",
-                      "    </div>",
-                      "    ${html}",
-                      "  </div>",
-                      "`;",
-                      "",
-                      "pm.visualizer.set(template, { html: html });"
+                      "pm.test('Status 200', function () {\n    pm.response.to.have.status(200);\n});\n\nvar json = pm.response.json();\nvar html = '';\n\nif (json.entry && json.entry.length > 0) {\n    var report = json.entry[0].resource;\n    \n    if (report.presentedForm && report.presentedForm.length > 0) {\n        for (var i = 0; i < report.presentedForm.length; i++) {\n            var attachment = report.presentedForm[i];\n            \n            if (attachment.contentType === 'text/html' && attachment.data) {\n                // Decode base64 HTML\n                html = atob(attachment.data);\n                break;\n            }\n            \n            if (attachment.contentType === 'text/html' && attachment.url) {\n                html = '<p>HTML is at external URL: ' + attachment.url + '</p>';\n                html += '<p>Use the \"Fetch presentedForm by URL\" request to retrieve it.</p>';\n                break;\n            }\n        }\n    }\n}\n\nif (!html) {\n    html = '<div style=\"font-family:sans-serif;padding:20px;\">',\n    html += '<h2>No presentedForm HTML found</h2>';\n    html += '<p>This DiagnosticReport does not contain an inline text/html presentedForm attachment.</p>';\n    \n    if (json.entry && json.entry[0] && json.entry[0].resource.presentedForm) {\n        html += '<h3>Available presentedForm attachments:</h3><ul>';\n        json.entry[0].resource.presentedForm.forEach(function(a) {\n            html += '<li>contentType: ' + (a.contentType || 'N/A');\n            html += ', has data: ' + (!!a.data) + ', url: ' + (a.url || 'N/A') + '</li>';\n        });\n        html += '</ul>';\n    }\n    html += '</div>';\n}\n\n// Wrap in a styled container\nvar template = `\n  <div style='border:1px solid #ddd; border-radius:8px; padding:16px; margin:8px; background:#fff;'>\n    <div style='font-family:sans-serif; font-size:12px; color:#666; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid #eee;'>\n      FHIR DiagnosticReport – presentedForm HTML Preview\n    </div>\n    ${html}\n  </div>\n`;\n\npm.visualizer.set(template, { html: html });"
                     ]
                   }
                 }
@@ -870,11 +760,15 @@
                 "header": [
                   {
                     "key": "Accept",
-                    "value": "application/fhir+json"
+                    "value": "application/json; charset=UTF-8"
+                  },
+                  {
+                    "key": "request-context",
+                    "value": "{{request-context}}"
                   }
                 ],
                 "url": {
-                  "raw": "{{base_url}}/DiagnosticReport?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|{{patient_nhi}}&status=final&_count=1",
+                  "raw": "{{base_url}}/DiagnosticReport?patient.identifier=BSC656602&status=final&_count=1",
                   "host": [
                     "{{base_url}}"
                   ],
@@ -884,7 +778,7 @@
                   "query": [
                     {
                       "key": "patient.identifier",
-                      "value": "https://standards.digital.health.nz/ns/nhi-id|{{patient_nhi}}"
+                      "value": "BSC656602"
                     },
                     {
                       "key": "status",
@@ -901,85 +795,6 @@
               "response": []
             }
           ]
-        },
-        {
-          "name": "6. Useful extras",
-          "item": [
-            {
-              "name": "Include referenced resources (_include)",
-              "request": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/fhir+json"
-                  }
-                ],
-                "url": {
-                  "raw": "{{base_url}}/DiagnosticReport?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|{{patient_nhi}}&_include=DiagnosticReport:result&_include=DiagnosticReport:performer",
-                  "host": [
-                    "{{base_url}}"
-                  ],
-                  "path": [
-                    "DiagnosticReport"
-                  ],
-                  "query": [
-                    {
-                      "key": "patient.identifier",
-                      "value": "https://standards.digital.health.nz/ns/nhi-id|{{patient_nhi}}"
-                    },
-                    {
-                      "key": "_include",
-                      "value": "DiagnosticReport:result"
-                    },
-                    {
-                      "key": "_include",
-                      "value": "DiagnosticReport:performer"
-                    }
-                  ]
-                },
-                "description": "Use `_include` to pull in referenced Observation results and Performer (Practitioner/Organization) in a single round trip."
-              },
-              "response": []
-            },
-            {
-              "name": "Paging – first page with _count",
-              "request": {
-                "method": "GET",
-                "header": [
-                  {
-                    "key": "Accept",
-                    "value": "application/fhir+json"
-                  }
-                ],
-                "url": {
-                  "raw": "{{base_url}}/DiagnosticReport?patient.identifier=https://standards.digital.health.nz/ns/nhi-id|{{patient_nhi}}&_count=10&_sort=-date",
-                  "host": [
-                    "{{base_url}}"
-                  ],
-                  "path": [
-                    "DiagnosticReport"
-                  ],
-                  "query": [
-                    {
-                      "key": "patient.identifier",
-                      "value": "https://standards.digital.health.nz/ns/nhi-id|{{patient_nhi}}"
-                    },
-                    {
-                      "key": "_count",
-                      "value": "10"
-                    },
-                    {
-                      "key": "_sort",
-                      "value": "-date"
-                    }
-                  ]
-                },
-                "description": "Page through results 10 at a time, newest first.\n\nLook for `Bundle.link` with `relation: next` for the next page URL."
-              },
-              "response": []
-            }
-          ]
         }
       ]
     },
@@ -988,6 +803,17 @@
       "item": [
         {
           "name": "Search All CarePlans",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test('Is a FHIR Bundle', function () {\r\n    var json = pm.response.json();\r\n    pm.expect(json.resourceType).to.eql('Bundle');\r\n});\r\n\r\n// Save first report ID for later use\r\nvar json = pm.response.json();\r\nif (json.entry && json.entry.length > 0) {\r\n    var firstId = json.entry[0].resource.id;\r\n    pm.collectionVariables.set('report_id', firstId);\r\n    console.log('Saved report_id: ' + firstId);\r\n}"
+                ]
+              }
+            }
+          ],
           "protocolProfileBehavior": {
             "disabledSystemHeaders": {
               "accept": true
@@ -1006,76 +832,18 @@
               }
             ],
             "url": {
-              "raw": "{{base_url}}/CarePlan",
+              "raw": "{{base_url}}/CarePlan?_count=10",
               "host": [
                 "{{base_url}}"
               ],
               "path": [
                 "CarePlan"
-              ]
-            },
-            "description": "Get all care plans"
-          },
-          "response": []
-        },
-        {
-          "name": "Search All CarePlans Copy 2",
-          "protocolProfileBehavior": {
-            "disabledSystemHeaders": {
-              "accept": true
-            }
-          },
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json; charset=UTF-8"
-              },
-              {
-                "key": "request-context",
-                "value": "{{request-context}}"
-              }
-            ],
-            "url": {
-              "raw": "{{base_url}}/CarePlan",
-              "host": [
-                "{{base_url}}"
               ],
-              "path": [
-                "CarePlan"
-              ]
-            },
-            "description": "Get all care plans"
-          },
-          "response": []
-        },
-        {
-          "name": "Search All CarePlans Copy",
-          "protocolProfileBehavior": {
-            "disabledSystemHeaders": {
-              "accept": true
-            }
-          },
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json; charset=UTF-8"
-              },
-              {
-                "key": "request-context",
-                "value": "{{request-context}}"
-              }
-            ],
-            "url": {
-              "raw": "{{base_url}}/Metadata",
-              "host": [
-                "{{base_url}}"
-              ],
-              "path": [
-                "Metadata"
+              "query": [
+                {
+                  "key": "_count",
+                  "value": "10"
+                }
               ]
             },
             "description": "Get all care plans"
@@ -1084,6 +852,17 @@
         },
         {
           "name": "Search CarePlan by Patient ID",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test('Is a FHIR Bundle', function () {\r\n    var json = pm.response.json();\r\n    pm.expect(json.resourceType).to.eql('Bundle');\r\n});\r\n\r\n// Save first report ID for later use\r\nvar json = pm.response.json();\r\nif (json.entry && json.entry.length > 0) {\r\n    var firstId = json.entry[0].resource.id;\r\n    pm.collectionVariables.set('report_id', firstId);\r\n    console.log('Saved report_id: ' + firstId);\r\n}"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "GET",
             "header": [
@@ -1117,6 +896,17 @@
         },
         {
           "name": "Search All CarePlans lastupdated",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test('Is a FHIR Bundle', function () {\r\n    var json = pm.response.json();\r\n    pm.expect(json.resourceType).to.eql('Bundle');\r\n});\r\n\r\n// Save first report ID for later use\r\nvar json = pm.response.json();\r\nif (json.entry && json.entry.length > 0) {\r\n    var firstId = json.entry[0].resource.id;\r\n    pm.collectionVariables.set('report_id', firstId);\r\n    console.log('Saved report_id: ' + firstId);\r\n}"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "GET",
             "header": [
@@ -1130,7 +920,7 @@
               }
             ],
             "url": {
-              "raw": "{{base_url}}/CarePlan?_lastUpdated=gt2025-08-19T05:54:15.054+00:00",
+              "raw": "{{base_url}}/CarePlan?_lastUpdated=gt2025-08-19T05:54:15.054+00:00&_count=10",
               "host": [
                 "{{base_url}}"
               ],
@@ -1141,6 +931,10 @@
                 {
                   "key": "_lastUpdated",
                   "value": "gt2025-08-19T05:54:15.054+00:00"
+                },
+                {
+                  "key": "_count",
+                  "value": "10"
                 }
               ]
             },
@@ -1150,6 +944,17 @@
         },
         {
           "name": "Search All CarePlans count offset",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test('Is a FHIR Bundle', function () {\r\n    var json = pm.response.json();\r\n    pm.expect(json.resourceType).to.eql('Bundle');\r\n});\r\n\r\n// Save first report ID for later use\r\nvar json = pm.response.json();\r\nif (json.entry && json.entry.length > 0) {\r\n    var firstId = json.entry[0].resource.id;\r\n    pm.collectionVariables.set('report_id', firstId);\r\n    console.log('Saved report_id: ' + firstId);\r\n}"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "GET",
             "header": [
@@ -1187,6 +992,17 @@
         },
         {
           "name": "Search All CarePlans count only",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test('Is a FHIR Bundle', function () {\r\n    var json = pm.response.json();\r\n    pm.expect(json.resourceType).to.eql('Bundle');\r\n});\r\n\r\n// Save first report ID for later use\r\nvar json = pm.response.json();\r\nif (json.entry && json.entry.length > 0) {\r\n    var firstId = json.entry[0].resource.id;\r\n    pm.collectionVariables.set('report_id', firstId);\r\n    console.log('Saved report_id: ' + firstId);\r\n}"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "GET",
             "header": [
@@ -1224,6 +1040,17 @@
         },
         {
           "name": "Search All CarePlans count and date",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test('Is a FHIR Bundle', function () {\r\n    var json = pm.response.json();\r\n    pm.expect(json.resourceType).to.eql('Bundle');\r\n});\r\n\r\n// Save first report ID for later use\r\nvar json = pm.response.json();\r\nif (json.entry && json.entry.length > 0) {\r\n    var firstId = json.entry[0].resource.id;\r\n    pm.collectionVariables.set('report_id', firstId);\r\n    console.log('Saved report_id: ' + firstId);\r\n}"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "GET",
             "header": [
@@ -1265,6 +1092,17 @@
         },
         {
           "name": "Get CarePlan by ID",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test('Is a FHIR CarePlan', function () {\r\n    var json = pm.response.json();\r\n    pm.expect(json.resourceType).to.eql('CarePlan');\r\n});\r\n\r\n// Save first report ID for later use\r\nvar json = pm.response.json();\r\nif (json.entry && json.entry.length > 0) {\r\n    var firstId = json.entry[0].resource.id;\r\n    pm.collectionVariables.set('report_id', firstId);\r\n    console.log('Saved report_id: ' + firstId);\r\n}"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "GET",
             "header": [
@@ -1297,6 +1135,17 @@
         },
         {
           "name": "Search CarePlan by Status",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test('Is a FHIR Bundle', function () {\r\n    var json = pm.response.json();\r\n    pm.expect(json.resourceType).to.eql('Bundle');\r\n});\r\n\r\n// Save first report ID for later use\r\nvar json = pm.response.json();\r\nif (json.entry && json.entry.length > 0) {\r\n    var firstId = json.entry[0].resource.id;\r\n    pm.collectionVariables.set('report_id', firstId);\r\n    console.log('Saved report_id: ' + firstId);\r\n}"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "GET",
             "header": [
@@ -1310,7 +1159,7 @@
               }
             ],
             "url": {
-              "raw": "{{base_url}}/CarePlan?status=active",
+              "raw": "{{base_url}}/CarePlan?status=active&_count=10",
               "host": [
                 "{{base_url}}"
               ],
@@ -1321,6 +1170,10 @@
                 {
                   "key": "status",
                   "value": "active"
+                },
+                {
+                  "key": "_count",
+                  "value": "10"
                 }
               ]
             },
@@ -1330,6 +1183,17 @@
         },
         {
           "name": "Search CarePlan by Status and count",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test('Is a FHIR Bundle', function () {\r\n    var json = pm.response.json();\r\n    pm.expect(json.resourceType).to.eql('Bundle');\r\n});\r\n\r\n// Save first report ID for later use\r\nvar json = pm.response.json();\r\nif (json.entry && json.entry.length > 0) {\r\n    var firstId = json.entry[0].resource.id;\r\n    pm.collectionVariables.set('report_id', firstId);\r\n    console.log('Saved report_id: ' + firstId);\r\n}"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "GET",
             "header": [
@@ -1367,6 +1231,17 @@
         },
         {
           "name": "Search CarePlan by Category",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test('Is a FHIR Bundle', function () {\r\n    var json = pm.response.json();\r\n    pm.expect(json.resourceType).to.eql('Bundle');\r\n});\r\n\r\n// Save first report ID for later use\r\nvar json = pm.response.json();\r\nif (json.entry && json.entry.length > 0) {\r\n    var firstId = json.entry[0].resource.id;\r\n    pm.collectionVariables.set('report_id', firstId);\r\n    console.log('Saved report_id: ' + firstId);\r\n}"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "GET",
             "header": [
@@ -1400,6 +1275,17 @@
         },
         {
           "name": "Search CarePlan by Date Range",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('Status 200', function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test('Is a FHIR Bundle', function () {\r\n    var json = pm.response.json();\r\n    pm.expect(json.resourceType).to.eql('Bundle');\r\n});\r\n\r\n// Save first report ID for later use\r\nvar json = pm.response.json();\r\nif (json.entry && json.entry.length > 0) {\r\n    var firstId = json.entry[0].resource.id;\r\n    pm.collectionVariables.set('report_id', firstId);\r\n    console.log('Saved report_id: ' + firstId);\r\n}"
+                ]
+              }
+            }
+          ],
           "request": {
             "method": "GET",
             "header": [
@@ -1413,7 +1299,7 @@
               }
             ],
             "url": {
-              "raw": "{{base_url}}/CarePlan?date=ge2024-01-01&date=le2026-12-31",
+              "raw": "{{base_url}}/CarePlan?date=ge2024-01-01&date=le2026-12-31&_count=10",
               "host": [
                 "{{base_url}}"
               ],
@@ -1428,6 +1314,10 @@
                 {
                   "key": "date",
                   "value": "le2026-12-31"
+                },
+                {
+                  "key": "_count",
+                  "value": "10"
                 }
               ]
             },
@@ -1445,7 +1335,7 @@
           "script": {
             "type": "text/javascript",
             "exec": [
-              "pm.test('Status 200', function () {\n    pm.response.to.have.status(200);\n});\n\npm.test('Is a FHIR Bundle', function () {\n    var json = pm.response.json();\n    pm.expect(json.resourceType).to.eql('Bundle');\n});\n\n// Save first report ID for later use\nvar json = pm.response.json();\nif (json.entry && json.entry.length > 0) {\n    var firstId = json.entry[0].resource.id;\n    pm.collectionVariables.set('report_id', firstId);\n    console.log('Saved report_id: ' + firstId);\n}"
+              "pm.test('Status 200', function () {\n    pm.response.to.have.status(200);\n});\n\npm.test('Is a FHIR CapabilityStatement', function () {\n    var json = pm.response.json();\n    pm.expect(json.resourceType).to.eql('CapabilityStatement');\n});\n\n// Save first report ID for later use\nvar json = pm.response.json();\nif (json.entry && json.entry.length > 0) {\n    var firstId = json.entry[0].resource.id;\n    pm.collectionVariables.set('report_id', firstId);\n    console.log('Saved report_id: ' + firstId);\n}"
             ]
           }
         }
@@ -1474,47 +1364,11 @@
         "description": "Search for all DiagnosticReport resources for a patient identified by their NHI number.\n\nThe `patient.identifier` parameter uses the chained search format:\n`system|value`"
       },
       "response": []
-    },
-    {
-      "name": "New Request",
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": {
-          "raw": ""
-        }
-      },
-      "response": []
     }
   ],
   "auth": {
     "type": "oauth2",
     "oauth2": [
-      {
-        "key": "tokenType",
-        "value": "Bearer",
-        "type": "string"
-      },
-      {
-        "key": "token_id",
-        "value": "e13b6d7e-8c68-4c5f-a720-0a144c379b45",
-        "type": "string"
-      },
-      {
-        "key": "accessToken",
-        "value": "eyJhbGciOiJFUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJJNlNBU0dSd3JkcTktVDJDNEdxY2NpUVh3RTAzZkN0WTYxdXBvemZHeXlBIn0.eyJleHAiOjE3ODk0NDc3MDEsImlhdCI6MTc4OTQ0NTkwMSwianRpIjoiNjhmNTZhYWEtNDBmYy00ODg0LTg2ODQtNWViODI1NzE4NDcwIiwiaXNzIjoiaHR0cHM6Ly9hcGkucHBkLmF1dGguZGlnaXRhbC5oZWFsdGgubnovcmVhbG1zL2huei1pbnRlZ3JhdGlvbiIsImF1ZCI6Imh0dHBzOi8vYXBpLnVhdC5ic2EuZGlnaXRhbC5oZWFsdGgubnoiLCJzdWIiOiIwMGM0Y2IwZi1jYWJkLTRkZDQtYjc0MC00ZGNkMGY5NjZjZDgiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiI1NTliMGM1YS1lYmQ4LTRiODMtYmU4Ny01NzUwNzMwMTA5YmIiLCJhY3IiOiIxIiwicmVzb3VyY2VfYWNjZXNzIjp7Imh0dHBzOi8vYXBpLnVhdC5ic2EuZGlnaXRhbC5oZWFsdGgubnoiOnsicm9sZXMiOlsiQlNBX1BhdGllbnRfRGlhZ25vc3RpY19SZXBvcnQiLCJCU0FfUGF0aWVudF9DYXJlX1BsYW4iXX19LCJzY29wZSI6InN5c3RlbS9DYXJlUGxhbi5zIHN5c3RlbS9EaWFnbm9zdGljUmVwb3J0LnMgc3lzdGVtL0RpYWdub3N0aWNSZXBvcnQuciBzeXN0ZW0vQ2FyZVBsYW4uciIsImFwcCI6eyJkc3AiOiJUZSBQdW5hIiwiaWQiOnsic3lzIjoiaHR0cHM6Ly9odWIuc2VydmljZXMuZGlnaXRhbC5oZWFsdGgubnovbnMvYXBwbGljYXRpb24taWQifX0sImNsaWVudEhvc3QiOiIyMjIuMTUzLjExOS4xNTYiLCJvcmciOnsiZHNwIjoiSGVhbHRoIE5ldyBaZWFsYW5kIOKIoyBUZSBXaGF0dSBPcmEgIiwiaWQiOnsidmFsIjoiR1paOTkzLUgiLCJzeXMiOiJodHRwczovL3N0YW5kYXJkcy5kaWdpdGFsLmhlYWx0aC5uei9ucy9ocGktb3JnYW5pc2F0aW9uLWlkIn19LCJjbGllbnRBZGRyZXNzIjoiMjIyLjE1My4xMTkuMTU2IiwiY2xpZW50X2lkIjoiNTU5YjBjNWEtZWJkOC00YjgzLWJlODctNTc1MDczMDEwOWJiIn0.3YVb7unE4W0QxKCdeaYqvxhCmxYIJJmo-WSpCXPEHxUlyYQFVK2Aib0ezbKTdG6zjSr9fgbzdN7HMeI8KACrAg",
-        "type": "string"
-      },
-      {
-        "key": "expires_in",
-        "value": 1800,
-        "type": "number"
-      },
-      {
-        "key": "timestamp",
-        "value": 1789445901209,
-        "type": "number"
-      },
       {
         "key": "clientId",
         "value": "559b0c5a-ebd8-4b83-be87-5750730109bb",
@@ -1522,18 +1376,23 @@
       },
       {
         "key": "accessTokenUrl",
-        "value": "https://api.ppd.auth.digital.health.nz/realms/hnz-integration/protocol/openid-connect/token",
+        "value": "f3bdb8b4-a0bd-488b-99ce-dacdeb82ff9f",
         "type": "string"
       },
       {
         "key": "authUrl",
-        "value": "https://hipdev.auth.ap-southeast-2.amazoncognito.com/oauth2/authorize",
+        "value": "eyJhbGciOiJFUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJJNlNBU0dSd3JkcTktVDJDNEdxY2NpUVh3RTAzZkN0WTYxdXBvemZHeXlBIn0.eyJleHAiOjE3ODk1MjM4MDgsImlhdCI6MTc4OTUyMjAwOCwianRpIjoiYjk4NDFhNzAtZTcwZS00ZjBhLTkwYzMtNjhiZTRlMmYyNzZjIiwiaXNzIjoiaHR0cHM6Ly9hcGkucHBkLmF1dGguZGlnaXRhbC5oZWFsdGgubnovcmVhbG1zL2huei1pbnRlZ3JhdGlvbiIsImF1ZCI6Imh0dHBzOi8vYXBpLnVhdC5ic2EuZGlnaXRhbC5oZWFsdGgubnoiLCJzdWIiOiIwMGM0Y2IwZi1jYWJkLTRkZDQtYjc0MC00ZGNkMGY5NjZjZDgiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiI1NTliMGM1YS1lYmQ4LTRiODMtYmU4Ny01NzUwNzMwMTA5YmIiLCJhY3IiOiIxIiwicmVzb3VyY2VfYWNjZXNzIjp7Imh0dHBzOi8vYXBpLnVhdC5ic2EuZGlnaXRhbC5oZWFsdGgubnoiOnsicm9sZXMiOlsiQlNBX1BhdGllbnRfRGlhZ25vc3RpY19SZXBvcnQiXX19LCJzY29wZSI6InN5c3RlbS9EaWFnbm9zdGljUmVwb3J0LnMgc3lzdGVtL0RpYWdub3N0aWNSZXBvcnQuciIsImFwcCI6eyJkc3AiOiJUZSBQdW5hIiwiaWQiOnsic3lzIjoiaHR0cHM6Ly9odWIuc2VydmljZXMuZGlnaXRhbC5oZWFsdGgubnovbnMvYXBwbGljYXRpb24taWQifX0sImNsaWVudEhvc3QiOiIxODAuMjEwLjIxMS4xMDIiLCJvcmciOnsiZHNwIjoiSGVhbHRoIE5ldyBaZWFsYW5kIOKIoyBUZSBXaGF0dSBPcmEgIiwiaWQiOnsidmFsIjoiR1paOTkzLUgiLCJzeXMiOiJodHRwczovL3N0YW5kYXJkcy5kaWdpdGFsLmhlYWx0aC5uei9ucy9ocGktb3JnYW5pc2F0aW9uLWlkIn19LCJjbGllbnRBZGRyZXNzIjoiMTgwLjIxMC4yMTEuMTAyIiwiY2xpZW50X2lkIjoiNTU5YjBjNWEtZWJkOC00YjgzLWJlODctNTc1MDczMDEwOWJiIn0.O3eJkPDbtEgFWvc4kuYIPNXRB73fuKUh8dqAS0-vYQfrIH0TKEbG9PPTiH4MnRTnVXAVYqiBzPN0DTD0kCDkKQ",
         "type": "string"
       },
       {
         "key": "tokenName",
         "value": "bsa_test",
         "type": "string"
+      },
+      {
+        "key": "tokenType",
+        "value": 1789522010381,
+        "type": "number"
       },
       {
         "key": "addTokenTo",
@@ -1552,7 +1411,7 @@
       },
       {
         "key": "scope",
-        "value": "system/DiagnosticReport.s system/DiagnosticReport.r ",
+        "value": "system/DiagnosticReport.s system/DiagnosticReport.r system/CarePlan.s system/CarePlan.r ",
         "type": "string"
       },
       {
@@ -1563,6 +1422,11 @@
       {
         "key": "grant_type",
         "value": "client_credentials",
+        "type": "string"
+      },
+      {
+        "key": "accessToken",
+        "value": "eyJhbGciOiJFUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJJNlNBU0dSd3JkcTktVDJDNEdxY2NpUVh3RTAzZkN0WTYxdXBvemZHeXlBIn0.eyJleHAiOjE3ODk1MjM4MDgsImlhdCI6MTc4OTUyMjAwOCwianRpIjoiYjk4NDFhNzAtZTcwZS00ZjBhLTkwYzMtNjhiZTRlMmYyNzZjIiwiaXNzIjoiaHR0cHM6Ly9hcGkucHBkLmF1dGguZGlnaXRhbC5oZWFsdGgubnovcmVhbG1zL2huei1pbnRlZ3JhdGlvbiIsImF1ZCI6Imh0dHBzOi8vYXBpLnVhdC5ic2EuZGlnaXRhbC5oZWFsdGgubnoiLCJzdWIiOiIwMGM0Y2IwZi1jYWJkLTRkZDQtYjc0MC00ZGNkMGY5NjZjZDgiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiI1NTliMGM1YS1lYmQ4LTRiODMtYmU4Ny01NzUwNzMwMTA5YmIiLCJhY3IiOiIxIiwicmVzb3VyY2VfYWNjZXNzIjp7Imh0dHBzOi8vYXBpLnVhdC5ic2EuZGlnaXRhbC5oZWFsdGgubnoiOnsicm9sZXMiOlsiQlNBX1BhdGllbnRfRGlhZ25vc3RpY19SZXBvcnQiXX19LCJzY29wZSI6InN5c3RlbS9EaWFnbm9zdGljUmVwb3J0LnMgc3lzdGVtL0RpYWdub3N0aWNSZXBvcnQuciIsImFwcCI6eyJkc3AiOiJUZSBQdW5hIiwiaWQiOnsic3lzIjoiaHR0cHM6Ly9odWIuc2VydmljZXMuZGlnaXRhbC5oZWFsdGgubnovbnMvYXBwbGljYXRpb24taWQifX0sImNsaWVudEhvc3QiOiIxODAuMjEwLjIxMS4xMDIiLCJvcmciOnsiZHNwIjoiSGVhbHRoIE5ldyBaZWFsYW5kIOKIoyBUZSBXaGF0dSBPcmEgIiwiaWQiOnsidmFsIjoiR1paOTkzLUgiLCJzeXMiOiJodHRwczovL3N0YW5kYXJkcy5kaWdpdGFsLmhlYWx0aC5uei9ucy9ocGktb3JnYW5pc2F0aW9uLWlkIn19LCJjbGllbnRBZGRyZXNzIjoiMTgwLjIxMC4yMTEuMTAyIiwiY2xpZW50X2lkIjoiNTU5YjBjNWEtZWJkOC00YjgzLWJlODctNTc1MDczMDEwOWJiIn0.O3eJkPDbtEgFWvc4kuYIPNXRB73fuKUh8dqAS0-vYQfrIH0TKEbG9PPTiH4MnRTnVXAVYqiBzPN0DTD0kCDkKQ",
         "type": "string"
       },
       {
@@ -1584,6 +1448,11 @@
         "key": "useBrowser",
         "value": true,
         "type": "boolean"
+      },
+      {
+        "key": "token_id",
+        "value": "f3bdb8b4-a0bd-488b-99ce-dacdeb82ff9f",
+        "type": "string"
       },
       {
         "key": "id",
