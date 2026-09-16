@@ -1,6 +1,6 @@
 {
   "info": {
-    "_postman_id": "36759f8e-745d-4062-aedf-14dc10061085",
+    "_postman_id": "dac37f16-afa6-4e4f-8366-0acd87e499bf",
     "name": "Te Puna HNZ GW",
     "description": "Demo collection for querying FHIR DiagnosticReport resources by patient NHI, status, and previewing the HTML presentedForm.\n\n## Setup\n1. Set the `base_url` variable to your FHIR server (e.g. https://your-fhir-server.com/fhir)\n2. Set the `patient_nhi` variable to the patient's NHI number\n3. If your server requires auth, set `auth_token` to your Bearer token\n\n## Presented Form (HTML Preview)\nThe last two requests extract the base64-encoded HTML from `presentedForm` and let you view it in Postman's Visualize tab.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
@@ -1371,12 +1371,12 @@
     "oauth2": [
       {
         "key": "clientId",
-        "value": "559b0c5a-ebd8-4b83-be87-5750730109bb",
+        "value": "{{auth_secret_0hv7}}",
         "type": "string"
       },
       {
         "key": "accessTokenUrl",
-        "value": "f3bdb8b4-a0bd-488b-99ce-dacdeb82ff9f",
+        "value": "https://api.ppd.auth.digital.health.nz/realms/hnz-integration/protocol/openid-connect/token",
         "type": "string"
       },
       {
@@ -1406,7 +1406,7 @@
       },
       {
         "key": "clientSecret",
-        "value": "zql00R0DFSrl0vgypx0CweudZ7NvGWAp",
+        "value": "{{auth_secret_0bdh}}",
         "type": "string"
       },
       {
@@ -1501,6 +1501,14 @@
     {
       "key": "report_id",
       "value": ""
+    },
+    {
+      "key": "auth_secret_0bdh",
+      "secret": true
+    },
+    {
+      "key": "auth_secret_0hv7",
+      "secret": true
     }
   ]
 }
