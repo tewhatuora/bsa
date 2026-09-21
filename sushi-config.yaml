@@ -10,7 +10,7 @@
 
 id: tewhatuora.breastscreening
 canonical:  https://fhir-ig.digital.health.nz/bsa
-version: 1.1.3
+version: 1.1.4
 name: BreastScreeningNZFHIRImplementationGuide
 title: Breast Screening NZ FHIR Implementation Guide
 status: active
@@ -53,6 +53,7 @@ menu:
   Profiles: profiles.html
   Terminology: terminology.html
   Developers Guide : developerGuide.html
+  Compliance Testing: ComplianceTests.md
   Table of Contents: toc.html
   Artifact Index: artifacts.html
   

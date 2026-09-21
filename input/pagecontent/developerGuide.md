@@ -111,5 +111,48 @@ An example request context follows illustrating FHIR API access on behalf of the
 ```
 
 
+* Access to a Patient's enrolled General Practice and Contact details are additional permissions that should be requested during the onboarding process
+
+#### Usage Plans
+
+An OAUTH2 clientid is associated with a usage plan, which sets upper limits on the API request volume which is permitted. If a client exceeds their usage plan allocation an http error will be returned
+
+
+<h3>Usage Plans</h3>
+<table>
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+<tr><th> Plan </th>
+<th> Rate </th>
+<th> Burst </th>
+<th> Quota </th></tr>
+
+<tr><td> bronze </td>
+<td> 1 request per second </td>
+<td> 5 </td>
+<td> 10,000 requests per day </td></tr>
+
+<tr><td> silver </td>
+<td> 5 requests per second </td>
+<td> 25 </td>
+<td> 250,000 requests per day </td></tr>
+
+<tr><td> gold </td>
+<td> 10 requests per second </td>
+<td> 50 </td>
+<td> 500,000 requests per day </td></tr>
+
+<tr><td> platinum </td>
+<td> 20 requests per second </td>
+<td> 1000 </td>
+<td> 1 million requests per day </td></tr>
+</table>
+
+
+If an application reaches its usage plan limit an HTTP 429 error will be returned. The expected behaviour is that the application will retry several times with an exponentially increasing delay.
 
 
