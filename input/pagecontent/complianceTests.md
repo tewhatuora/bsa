@@ -1,4 +1,4 @@
-<table>
+Put your HTML text here<table>
 <style>
 table, th, td {
   border: 1px solid black;
@@ -154,7 +154,184 @@ table, th, td {
           <li>Clear mapping between test cases and results</li>
         </ul>
       </td>
-    </tr>
+    </tr><tr>
+  <td>BCC-09</td>
+  <td>Use of Test Data</td>
+  <td>
+    Only approved test data is used during compliance testing. No production or
+    real patient data is used in non-production environments.
+  </td>
+  <td>Mandatory</td>
+  <td>
+    <ul>
+      <li>List of test identifiers used (e.g. NHI test IDs)</li>
+      <li>Sample payloads showing test data</li>
+      <li>Confirmation statement from vendor</li>
+    </ul>
+  </td>
+</tr>
+
+<tr>
+  <td>BCC-10</td>
+  <td>Terms of Use / Legal Compliance</td>
+  <td>
+    The application presents applicable terms of use and captures user
+    acceptance where required. Use of the API complies with legal and policy
+    requirements.
+  </td>
+  <td>Mandatory</td>
+  <td>
+    <ul>
+      <li>Screenshot of terms presented in UI</li>
+      <li>Evidence of acceptance capture (e.g. checkbox, audit record)</li>
+      <li>Description of how acceptance is stored</li>
+    </ul>
+  </td>
+</tr>
+
+<tr>
+  <td>BCC-11</td>
+  <td>Security Controls</td>
+  <td>
+    The application implements appropriate security controls, including secure
+    transport (HTTPS), protection of credentials, and prevention of
+    unauthorised access. Sensitive data is handled appropriately.
+  </td>
+  <td>Mandatory</td>
+  <td>
+    <ul>
+      <li>Architecture or design summary (security controls)</li>
+      <li>Evidence of HTTPS usage</li>
+      <li>Description of credential handling and access controls</li>
+    </ul>
+  </td>
+</tr>
+
+<tr>
+  <td>BCC-12</td>
+  <td>Data Validation</td>
+  <td>
+    The application validates key identifiers and required fields before
+    sending requests to the API. This includes format validation (e.g.
+    identifier structure), mandatory fields, and basic business rules.
+    Invalid data should be prevented from being submitted or clearly flagged
+    to the user.
+  </td>
+  <td>Mandatory</td>
+  <td>
+    <ul>
+      <li>Screenshots or video showing validation in the UI (e.g. invalid identifier rejected)</li>
+      <li>Sample request payloads (valid vs invalid)</li>
+      <li>Logs showing rejected submissions</li>
+    </ul>
+  </td>
+</tr>
+
+<tr>
+  <td>BCC-13</td>
+  <td>Rate Limiting Behaviour</td>
+  <td>
+    The application detects and appropriately responds to API rate limiting
+    (e.g. HTTP 429). It should implement backoff/retry strategies and avoid
+    overwhelming the API.
+  </td>
+  <td></td>
+  <td>
+    <ul>
+      <li>Logs showing handling of 429 responses</li>
+      <li>Evidence of retry/backoff logic (e.g. increasing delay)</li>
+      <li>Description of retry strategy (config or design excerpt)</li>
+    </ul>
+  </td>
+</tr>
+
+<tr>
+  <td>BCC-14</td>
+  <td>Logging &amp; Monitoring</td>
+  <td>
+    The application logs key events required for audit, troubleshooting, and
+    monitoring. This includes request/response activity, errors, and user
+    actions, while ensuring sensitive data is handled appropriately.
+  </td>
+  <td></td>
+  <td>
+    <ul>
+      <li>Sample log extracts (sanitised if needed)</li>
+      <li>Description of what is logged (e.g. request ID, user ID, timestamp)</li>
+      <li>Evidence logs can be used to trace a transaction end-to-end</li>
+    </ul>
+  </td>
+</tr>
+
+<tr>
+  <td>BCC-15</td>
+  <td>Data Integrity</td>
+  <td>
+    Systems consuming Diagnostic Report information via the API must ensure
+    that content cannot be edited by end users.
+  </td>
+  <td>Mandatory</td>
+  <td>
+    <ul>
+      <li>Evidence to show Diagnostic Report content is displayed as view only</li>
+    </ul>
+  </td>
+</tr>
+
+<tr>
+  <td>BCC-16</td>
+  <td>Data Integrity</td>
+  <td>
+    Systems consuming the API must ensure the integrity and accuracy of the
+    information displayed to end users.
+  </td>
+  <td>Mandatory</td>
+  <td>
+    <ul>
+      <li>
+        Evidence to show data returned from the API for a Diagnostic Report
+        is the data shown to end users
+      </li>
+    </ul>
+  </td>
+</tr>
+
+<tr>
+  <td>BCC-17</td>
+  <td>End User Notifications</td>
+  <td>
+    Where a draft report is returned then the rendered report document must
+    clearly identify the report as being in a draft state.
+  </td>
+  <td>Mandatory</td>
+  <td>
+    <ul>
+      <li>
+        Evidence to show that when a draft report is opened it is clear for
+        users they are looking at a draft, e.g. a draft watermark is applied
+      </li>
+    </ul>
+  </td>
+</tr>
+
+<tr>
+  <td>BCC-18</td>
+  <td>End User Notifications</td>
+  <td>
+    Diagnostic reports returned must clearly display the status of the report.
+  </td>
+  <td>Mandatory</td>
+  <td>
+    <ul>
+      <li>
+        Evidence to show that when a report is displayed for selection by a
+        user the report status is clearly defined
+      </li>
+    </ul>
+  </td>
+</tr>
+    
+    
 
     <!-- Continue BCC-09 through BCC-18 using the same pattern -->
   </tbody>
