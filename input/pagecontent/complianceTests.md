@@ -1,4 +1,4 @@
-Put your HTML text here<table>
+<table>
 <style>
 table, th, td {
   border: 1px solid black;
@@ -31,7 +31,6 @@ table, th, td {
         </ul>
       </td>
     </tr>
-
     <tr>
       <td>BCC-02</td>
       <td>User Identity Propagation</td>
@@ -49,7 +48,6 @@ table, th, td {
         </ul>
       </td>
     </tr>
-
     <tr>
       <td>BCC-03</td>
       <td>User Context Switching</td>
@@ -66,7 +64,6 @@ table, th, td {
         </ul>
       </td>
     </tr>
-
     <tr>
       <td>BCC-04</td>
       <td>Role-Based Access Control (RBAC)</td>
