@@ -113,7 +113,7 @@ An example request context follows illustrating FHIR API access on behalf of the
 
 * Access to a Patient's enrolled General Practice and Contact details are additional permissions that should be requested during the onboarding process
 
-### Usage Plans
+## Usage Plans
 
 An OAUTH2 clientid is associated with a usage plan, which sets upper limits on the API request volume which is permitted. If a client exceeds their usage plan allocation an http error will be returned
 
