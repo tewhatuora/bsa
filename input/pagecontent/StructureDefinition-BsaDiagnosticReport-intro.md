@@ -2,7 +2,7 @@
 
 **[DiagnosticReport - Breast Screening](StructureDefinition-DiagnosticReport.html)**
 
-This profile defines constraints on the DiagnosticReport resource for representing a participant's BSA screening outcomes and radiologist assessment reports"
+This profile defines constraints on the DiagnosticReport resource for representing a participant's BSA screening outcomes and radiologist assessment reports
 
 
 
