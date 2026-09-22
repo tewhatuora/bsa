@@ -37,17 +37,17 @@ table, th, td {
 </tr>
  
 <tr><td>PRE_ENROLLED</td>
-<td>DRAFT</td>
+<td>draft</td>
 <td>Participant has not yet fully enrolled in BSA.</td>
 </tr>
     
 <tr><td>ENROLLED</td>
-<td>ACTIVE</td>
+<td>active</td>
 <td>Participant is actively enrolled in the programme.</td>
 </tr>
 
 <tr><td>NOT_ENROLLED</td>
-<td>ENDED</td>
+<td>completed</td>
 <td>Participant is no longer enrolled in BSA.</td>
 </tr>
 </table>
