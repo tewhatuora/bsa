@@ -297,15 +297,13 @@ table, th, td {
   <td>BCC-17</td>
   <td>End User Notifications</td>
   <td>
-    Where a draft report is returned then the rendered report document must
-    clearly identify the report as being in a draft state.
+    Where a partial (draft) report is returned then the rendered report document must clearly identify the report as being in a draft state
   </td>
   <td>Mandatory</td>
   <td>
     <ul>
       <li>
-        Evidence to show that when a draft report is opened it is clear for
-        users they are looking at a draft, e.g. a draft watermark is applied
+        Evidence to show that when a draft report is opened it is clear for users they’re looking at draft content, e.g. text is coloured, Italic, or a watermark is applied
       </li>
     </ul>
   </td>

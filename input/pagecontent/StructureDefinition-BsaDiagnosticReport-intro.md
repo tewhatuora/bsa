@@ -37,37 +37,37 @@ table, th, td {
 
 <tr><td>DRAFT_NOT_STARTED</td>
 <td>registered</td>
-<td>Report created but not yet started</td>
+<td>The existence of the report is registered, but there is nothing yet available.</td>
 </tr>
 
 <tr><td>DRAFT_IN_PROGRESS</td>
 <td>partial</td>
-<td>Report is being drafted</td>
+<td>This is a partial (e.g. initial, interim or preliminary) report: data in the report may be incomplete or unverified.</td>
 </tr>
     
 <tr><td>DOUBLE_READ_IN_PROGRESS</td>
-<td>preliminary</td>
-<td>Under double-read review</td>
+<td>partial</td>
+<td>This is a partial (e.g. initial, interim or preliminary) report: data in the report may be incomplete or unverified.</td>
 </tr>
     
 <tr><td>PENDING_DOUBLE_READ</td>
-<td>preliminary</td>
-<td>Awaiting double-read</td>
+<td>partial</td>
+<td>This is a partial (e.g. initial, interim or preliminary) report: data in the report may be incomplete or unverified.</td>
 </tr>
     
 <tr><td>COMPLETED</td>
-<td>final</td>
-<td>Report finalised</td>
+<td>partial</td>
+<td>This is a partial (e.g. initial, interim or preliminary) report: data in the report may be incomplete or unverified.</td>
 </tr>
     
 <tr><td>COMPLETED_REPORT_SENT</td>
 <td>final</td>
-<td>Report finalised and sent</td>
+<td>The report is complete and verified by an authorized person.</td>
 </tr>
     
 <tr><td>ADDENDUM_IN_PROGRESS</td>
 <td>amended</td>
-<td>Report is being amended after finalisation</td>
+<td>Subsequent to being final, the report has been modified. This includes any change in the results, diagnosis, narrative text, or other content of a report that has been issued.</td>
 </tr>
 </table>
 
