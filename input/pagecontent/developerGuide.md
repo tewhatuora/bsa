@@ -135,7 +135,7 @@ table, th, td {
 <td> 5 </td>
 <td> 10,000 requests per day </td></tr>
 
-<tr><td> silver </td>
+<tr><td> silver </td>v
 <td> 5 requests per second </td>
 <td> 25 </td>
 <td> 250,000 requests per day </td></tr>
@@ -147,7 +147,7 @@ table, th, td {
 
 <tr><td> platinum </td>
 <td> 20 requests per second </td>
-<td> 1000 </td>
+<td> 100 </td>
 <td> 1 million requests per day </td></tr>
 </table>
 
