@@ -8,8 +8,8 @@ Usage: #definition
 * date = "2023-05-24"
 * kind = #instance
 * fhirVersion = #4.0.1
-* format = #json
-* patchFormat = #json
+* format = #application/fhir+json
+* patchFormat = #application/fhir+json
 * version = "1.1.0"
 
 * publisher = "New Zealand Ministry of Health"
