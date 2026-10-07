@@ -1,1 +1,2 @@
-java -jar ~/publisher.jar -ig . -proxy WebProxy-80fef376c00ea74f.elb.ap-southeast-2.amazonaws.com:3128  -authorise-non-conformant-tx-servers 
+#java -jar ~/fhir-tools/publisher.jar -ig . -proxy WebProxy-80fef376c00ea74f.elb.ap-southeast-2.amazonaws.com:3128  -authorise-non-conformant-tx-servers 
+ java -jar publisher.jar -ig ig.ini
