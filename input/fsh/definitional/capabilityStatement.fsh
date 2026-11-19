@@ -47,7 +47,7 @@ Usage: #definition
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].interaction[=].documentation = "GET,[base]/DiagnosticReport, Search for a patient's  participant's BSA screening outcomes and radiologist assessment reports,system/DiagnosticReport.s"
 
-* rest.resource[=].searchParam[0].name = "patient"
+* rest.resource[=].searchParam[0].name = "patient.identifier"
 * rest.resource[=].searchParam[0].type = #reference
 * rest.resource[=].searchParam[0].documentation = "NHI id of patient who is the subject of the report"
  
@@ -71,7 +71,7 @@ Usage: #definition
 * rest.resource[=].interaction[+].code = #search-type
 * rest.resource[=].interaction[=].documentation = "GET,[base]/CarePlan, Search for a participant's BSA screening enrolment and pathway status,system/CarePlan.s"
 
-* rest.resource[=].searchParam[0].name = "patient"
+* rest.resource[=].searchParam[0].name = "patient.identifier"
 * rest.resource[=].searchParam[0].type = #reference
 * rest.resource[=].searchParam[0].documentation = "NHI id of patient who is the subject of the CarePlan"
  
