@@ -10,7 +10,7 @@ Usage: #definition
 * fhirVersion = #4.0.1
 * format = #application/fhir+json
 * patchFormat = #application/fhir+json
-* version = "1.1.0"
+* version = "1.1.1"
 
 * publisher = "New Zealand Ministry of Health"
 
