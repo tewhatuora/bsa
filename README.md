@@ -43,7 +43,7 @@ Then you can initiate the build with a curl command
 ### OpenAPI
 The openaPI spec was generated using the  https://github.com/tewhatuora/fhir-openapi-converter, run locally with the command
 `node .\src\cli.js --remoteUrl https://fhir-ig-uat.digital.health.nz/bsa/package.tgz`
-
+   
  
  
     
