@@ -2,7 +2,7 @@
 
 ### Get BSA DiagnosticReport  for Patient
 
-This is typically used to get a BSA radiologist assessment reports.
+This is typically used to get a BSA radiologist assessment reports or a participant.
 
 
 <div>
